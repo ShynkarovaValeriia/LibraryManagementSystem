@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IssueBooks));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.issue_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,17 +56,18 @@
             this.lblReaderID = new System.Windows.Forms.Label();
             this.txtBookID = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnBooks = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnReturnBooks = new System.Windows.Forms.Button();
+            this.btnReaders = new System.Windows.Forms.Button();
+            this.btnIssueBooks = new System.Windows.Forms.Button();
             this.btnLoadFile = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.cbBookName = new System.Windows.Forms.ComboBox();
             this.cbReaderName = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.btnBooks = new System.Windows.Forms.Button();
-            this.btnLogout = new System.Windows.Forms.Button();
-            this.btnReturnBooks = new System.Windows.Forms.Button();
-            this.btnReaders = new System.Windows.Forms.Button();
-            this.btnIssueBooks = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNormal)).BeginInit();
@@ -263,12 +265,13 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(26, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(23, 11);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(151, 151);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox2, "Натисніть, щоб перейти в головне меню");
             this.pictureBox2.Click += new System.EventHandler(this.btnHomePage_Click);
             this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Books_MouseDown);
             this.pictureBox2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Books_MouseMove);
@@ -435,84 +438,6 @@
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Books_MouseMove);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Books_MouseUp);
             // 
-            // btnLoadFile
-            // 
-            this.btnLoadFile.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnLoadFile.BackColor = System.Drawing.Color.White;
-            this.btnLoadFile.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLoadFile.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnLoadFile.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Menu;
-            this.btnLoadFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoadFile.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoadFile.ForeColor = System.Drawing.Color.Black;
-            this.btnLoadFile.Location = new System.Drawing.Point(777, 439);
-            this.btnLoadFile.Name = "btnLoadFile";
-            this.btnLoadFile.Size = new System.Drawing.Size(190, 40);
-            this.btnLoadFile.TabIndex = 94;
-            this.btnLoadFile.Text = "Завантажити файл";
-            this.btnLoadFile.UseVisualStyleBackColor = false;
-            this.btnLoadFile.Click += new System.EventHandler(this.btnLoadFile_Click);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(760, 69);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 23);
-            this.label1.TabIndex = 96;
-            this.label1.Text = "Дата повернення";
-            // 
-            // cbBookName
-            // 
-            this.cbBookName.BackColor = System.Drawing.Color.White;
-            this.cbBookName.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbBookName.ForeColor = System.Drawing.Color.Black;
-            this.cbBookName.FormattingEnabled = true;
-            this.cbBookName.Location = new System.Drawing.Point(402, 8);
-            this.cbBookName.Name = "cbBookName";
-            this.cbBookName.Size = new System.Drawing.Size(134, 31);
-            this.cbBookName.TabIndex = 98;
-            this.cbBookName.Text = "Назва книги";
-            // 
-            // cbReaderName
-            // 
-            this.cbReaderName.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbReaderName.ForeColor = System.Drawing.Color.Black;
-            this.cbReaderName.FormattingEnabled = true;
-            this.cbReaderName.Location = new System.Drawing.Point(582, 8);
-            this.cbReaderName.Name = "cbReaderName";
-            this.cbReaderName.Size = new System.Drawing.Size(134, 31);
-            this.cbReaderName.TabIndex = 99;
-            this.cbReaderName.Text = "Ім\'я читача";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.Black;
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.White;
-            this.dateTimePicker1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(582, 98);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(134, 30);
-            this.dateTimePicker1.TabIndex = 100;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.CalendarForeColor = System.Drawing.Color.Black;
-            this.dateTimePicker2.CalendarMonthBackground = System.Drawing.Color.White;
-            this.dateTimePicker2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dateTimePicker2.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(762, 98);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(134, 30);
-            this.dateTimePicker2.TabIndex = 101;
-            // 
             // btnBooks
             // 
             this.btnBooks.BackColor = System.Drawing.Color.Transparent;
@@ -608,6 +533,88 @@
             this.btnIssueBooks.Text = "     Видача книг";
             this.btnIssueBooks.UseVisualStyleBackColor = false;
             // 
+            // btnLoadFile
+            // 
+            this.btnLoadFile.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnLoadFile.BackColor = System.Drawing.Color.White;
+            this.btnLoadFile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLoadFile.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnLoadFile.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Menu;
+            this.btnLoadFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoadFile.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoadFile.ForeColor = System.Drawing.Color.Black;
+            this.btnLoadFile.Location = new System.Drawing.Point(777, 439);
+            this.btnLoadFile.Name = "btnLoadFile";
+            this.btnLoadFile.Size = new System.Drawing.Size(190, 40);
+            this.btnLoadFile.TabIndex = 94;
+            this.btnLoadFile.Text = "Завантажити файл";
+            this.btnLoadFile.UseVisualStyleBackColor = false;
+            this.btnLoadFile.Click += new System.EventHandler(this.btnLoadFile_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(760, 69);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(148, 23);
+            this.label1.TabIndex = 96;
+            this.label1.Text = "Дата повернення";
+            // 
+            // cbBookName
+            // 
+            this.cbBookName.BackColor = System.Drawing.Color.White;
+            this.cbBookName.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbBookName.ForeColor = System.Drawing.Color.Black;
+            this.cbBookName.FormattingEnabled = true;
+            this.cbBookName.Location = new System.Drawing.Point(402, 8);
+            this.cbBookName.Name = "cbBookName";
+            this.cbBookName.Size = new System.Drawing.Size(134, 31);
+            this.cbBookName.TabIndex = 98;
+            this.cbBookName.Text = "Назва книги";
+            // 
+            // cbReaderName
+            // 
+            this.cbReaderName.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbReaderName.ForeColor = System.Drawing.Color.Black;
+            this.cbReaderName.FormattingEnabled = true;
+            this.cbReaderName.Location = new System.Drawing.Point(582, 8);
+            this.cbReaderName.Name = "cbReaderName";
+            this.cbReaderName.Size = new System.Drawing.Size(134, 31);
+            this.cbReaderName.TabIndex = 99;
+            this.cbReaderName.Text = "Ім\'я читача";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.Black;
+            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.White;
+            this.dateTimePicker1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dateTimePicker1.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(582, 98);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(134, 30);
+            this.dateTimePicker1.TabIndex = 100;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.CalendarForeColor = System.Drawing.Color.Black;
+            this.dateTimePicker2.CalendarMonthBackground = System.Drawing.Color.White;
+            this.dateTimePicker2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dateTimePicker2.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker2.Location = new System.Drawing.Point(762, 98);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(134, 30);
+            this.dateTimePicker2.TabIndex = 101;
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.ForeColor = System.Drawing.Color.Black;
+            // 
             // IssueBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -700,5 +707,6 @@
         private System.Windows.Forms.Button btnReturnBooks;
         private System.Windows.Forms.Button btnReaders;
         private System.Windows.Forms.Button btnIssueBooks;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

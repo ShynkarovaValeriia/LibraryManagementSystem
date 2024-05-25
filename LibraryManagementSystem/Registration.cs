@@ -295,5 +295,33 @@ namespace LibraryManagementSystem
             eyeClose.Visible = false;
             eyeOpen.Visible = true;
         }
+
+        private void txtPassword_Enter(object sender, EventArgs e)
+        {
+            if (eyeClose.Visible == true)
+            {
+                txtPassword.PasswordChar = '*'; // Пароль сховано
+            }
+            else
+            {
+                txtPassword.PasswordChar = '\0'; // Пароль видно
+            }
+        }
+
+        private void txtPassword_Leave(object sender, EventArgs e)
+        {
+            if (txtPassword.Text == "")
+            {
+                txtPassword.PasswordChar = '\0'; // Пароль видно
+            }
+            else if (eyeClose.Visible == true)
+            {
+                txtPassword.PasswordChar = '*'; // Пароль сховано
+            }
+            else
+            {
+                txtPassword.PasswordChar = '\0'; // Пароль видно
+            }    
+        }
     }
 }

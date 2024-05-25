@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registration));
             this.LinkLogin = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,6 +47,8 @@
             this.eyeClose = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btnMaximize = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnNormal)).BeginInit();
@@ -116,10 +119,11 @@
             this.txtPassword.Location = new System.Drawing.Point(35, 220);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(394, 42);
             this.txtPassword.TabIndex = 14;
             this.txtPassword.Text = "Пароль";
+            this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
+            this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
             // 
             // txtUsername
             // 
@@ -256,6 +260,7 @@
             this.eyeOpen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.eyeOpen.TabIndex = 23;
             this.eyeOpen.TabStop = false;
+            this.toolTip2.SetToolTip(this.eyeOpen, "Натисніть, щоб приховати пароль");
             this.eyeOpen.Visible = false;
             this.eyeOpen.Click += new System.EventHandler(this.eyeOpen_Click);
             // 
@@ -270,6 +275,7 @@
             this.eyeClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.eyeClose.TabIndex = 22;
             this.eyeClose.TabStop = false;
+            this.toolTip1.SetToolTip(this.eyeClose, "Натисніть, щоб відобразити пароль");
             this.eyeClose.Click += new System.EventHandler(this.eyeClose_Click);
             // 
             // pictureBox5
@@ -358,5 +364,7 @@
         private System.Windows.Forms.PictureBox btnNormal;
         private System.Windows.Forms.PictureBox btnMinimize;
         private System.Windows.Forms.PictureBox btnClose;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolTip toolTip2;
     }
 }

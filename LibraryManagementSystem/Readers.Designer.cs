@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Readers));
             this.btnLoadFile = new System.Windows.Forms.Button();
             this.btnClearTable = new System.Windows.Forms.Button();
@@ -41,6 +42,11 @@
             this.lblReaderName = new System.Windows.Forms.Label();
             this.txtReaderID = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnBooks = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnReturnBooks = new System.Windows.Forms.Button();
+            this.btnReaders = new System.Windows.Forms.Button();
+            this.btnIssueBooks = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.reader_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,11 +61,7 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btnMinimize = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.PictureBox();
-            this.btnBooks = new System.Windows.Forms.Button();
-            this.btnLogout = new System.Windows.Forms.Button();
-            this.btnReturnBooks = new System.Windows.Forms.Button();
-            this.btnReaders = new System.Windows.Forms.Button();
-            this.btnIssueBooks = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -260,18 +262,114 @@
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Books_MouseMove);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Books_MouseUp);
             // 
+            // btnBooks
+            // 
+            this.btnBooks.BackColor = System.Drawing.Color.Transparent;
+            this.btnBooks.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBooks.FlatAppearance.BorderSize = 0;
+            this.btnBooks.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Menu;
+            this.btnBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBooks.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBooks.ForeColor = System.Drawing.Color.Black;
+            this.btnBooks.Image = ((System.Drawing.Image)(resources.GetObject("btnBooks.Image")));
+            this.btnBooks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBooks.Location = new System.Drawing.Point(-2, 156);
+            this.btnBooks.Name = "btnBooks";
+            this.btnBooks.Size = new System.Drawing.Size(200, 60);
+            this.btnBooks.TabIndex = 40;
+            this.btnBooks.Text = "Книги";
+            this.btnBooks.UseVisualStyleBackColor = false;
+            this.btnBooks.Click += new System.EventHandler(this.btnBooks_Click);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnLogout.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Menu;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.Color.Black;
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.Location = new System.Drawing.Point(-2, 410);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(200, 60);
+            this.btnLogout.TabIndex = 44;
+            this.btnLogout.Text = "Вийти";
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // btnReturnBooks
+            // 
+            this.btnReturnBooks.BackColor = System.Drawing.Color.Transparent;
+            this.btnReturnBooks.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReturnBooks.FlatAppearance.BorderSize = 0;
+            this.btnReturnBooks.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Menu;
+            this.btnReturnBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReturnBooks.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReturnBooks.ForeColor = System.Drawing.Color.Black;
+            this.btnReturnBooks.Image = ((System.Drawing.Image)(resources.GetObject("btnReturnBooks.Image")));
+            this.btnReturnBooks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReturnBooks.Location = new System.Drawing.Point(-2, 333);
+            this.btnReturnBooks.Name = "btnReturnBooks";
+            this.btnReturnBooks.Size = new System.Drawing.Size(200, 60);
+            this.btnReturnBooks.TabIndex = 43;
+            this.btnReturnBooks.Text = "     Повернення \r\n книг";
+            this.btnReturnBooks.UseVisualStyleBackColor = false;
+            this.btnReturnBooks.Click += new System.EventHandler(this.btnReturnBooks_Click);
+            // 
+            // btnReaders
+            // 
+            this.btnReaders.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnReaders.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReaders.FlatAppearance.BorderSize = 0;
+            this.btnReaders.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Menu;
+            this.btnReaders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReaders.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReaders.ForeColor = System.Drawing.Color.Black;
+            this.btnReaders.Image = ((System.Drawing.Image)(resources.GetObject("btnReaders.Image")));
+            this.btnReaders.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReaders.Location = new System.Drawing.Point(-2, 215);
+            this.btnReaders.Name = "btnReaders";
+            this.btnReaders.Size = new System.Drawing.Size(200, 60);
+            this.btnReaders.TabIndex = 41;
+            this.btnReaders.Text = "Читачі";
+            this.btnReaders.UseVisualStyleBackColor = false;
+            // 
+            // btnIssueBooks
+            // 
+            this.btnIssueBooks.BackColor = System.Drawing.Color.Transparent;
+            this.btnIssueBooks.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnIssueBooks.FlatAppearance.BorderSize = 0;
+            this.btnIssueBooks.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Menu;
+            this.btnIssueBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIssueBooks.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIssueBooks.ForeColor = System.Drawing.Color.Black;
+            this.btnIssueBooks.Image = ((System.Drawing.Image)(resources.GetObject("btnIssueBooks.Image")));
+            this.btnIssueBooks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIssueBooks.Location = new System.Drawing.Point(-2, 274);
+            this.btnIssueBooks.Name = "btnIssueBooks";
+            this.btnIssueBooks.Size = new System.Drawing.Size(200, 60);
+            this.btnIssueBooks.TabIndex = 42;
+            this.btnIssueBooks.Text = "     Видача книг";
+            this.btnIssueBooks.UseVisualStyleBackColor = false;
+            this.btnIssueBooks.Click += new System.EventHandler(this.btnIssueBooks_Click);
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(26, 11);
+            this.pictureBox2.Location = new System.Drawing.Point(23, 11);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(151, 151);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox2, "Натисніть, щоб перейти в головне меню");
             this.pictureBox2.Click += new System.EventHandler(this.btnHomePage_Click);
             this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Books_MouseDown);
             this.pictureBox2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Books_MouseMove);
@@ -441,100 +539,9 @@
             this.btnClose.TabStop = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // btnBooks
+            // toolTip1
             // 
-            this.btnBooks.BackColor = System.Drawing.Color.Transparent;
-            this.btnBooks.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBooks.FlatAppearance.BorderSize = 0;
-            this.btnBooks.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Menu;
-            this.btnBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBooks.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBooks.ForeColor = System.Drawing.Color.Black;
-            this.btnBooks.Image = ((System.Drawing.Image)(resources.GetObject("btnBooks.Image")));
-            this.btnBooks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBooks.Location = new System.Drawing.Point(-2, 156);
-            this.btnBooks.Name = "btnBooks";
-            this.btnBooks.Size = new System.Drawing.Size(200, 60);
-            this.btnBooks.TabIndex = 40;
-            this.btnBooks.Text = "Книги";
-            this.btnBooks.UseVisualStyleBackColor = false;
-            this.btnBooks.Click += new System.EventHandler(this.btnBooks_Click);
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnLogout.BackColor = System.Drawing.Color.Transparent;
-            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogout.FlatAppearance.BorderSize = 0;
-            this.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Menu;
-            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.ForeColor = System.Drawing.Color.Black;
-            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
-            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(-2, 410);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(200, 60);
-            this.btnLogout.TabIndex = 44;
-            this.btnLogout.Text = "Вийти";
-            this.btnLogout.UseVisualStyleBackColor = false;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // btnReturnBooks
-            // 
-            this.btnReturnBooks.BackColor = System.Drawing.Color.Transparent;
-            this.btnReturnBooks.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReturnBooks.FlatAppearance.BorderSize = 0;
-            this.btnReturnBooks.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Menu;
-            this.btnReturnBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReturnBooks.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReturnBooks.ForeColor = System.Drawing.Color.Black;
-            this.btnReturnBooks.Image = ((System.Drawing.Image)(resources.GetObject("btnReturnBooks.Image")));
-            this.btnReturnBooks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReturnBooks.Location = new System.Drawing.Point(-2, 333);
-            this.btnReturnBooks.Name = "btnReturnBooks";
-            this.btnReturnBooks.Size = new System.Drawing.Size(200, 60);
-            this.btnReturnBooks.TabIndex = 43;
-            this.btnReturnBooks.Text = "     Повернення \r\n книг";
-            this.btnReturnBooks.UseVisualStyleBackColor = false;
-            this.btnReturnBooks.Click += new System.EventHandler(this.btnReturnBooks_Click);
-            // 
-            // btnReaders
-            // 
-            this.btnReaders.BackColor = System.Drawing.SystemColors.Menu;
-            this.btnReaders.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReaders.FlatAppearance.BorderSize = 0;
-            this.btnReaders.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Menu;
-            this.btnReaders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReaders.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReaders.ForeColor = System.Drawing.Color.Black;
-            this.btnReaders.Image = ((System.Drawing.Image)(resources.GetObject("btnReaders.Image")));
-            this.btnReaders.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReaders.Location = new System.Drawing.Point(-2, 215);
-            this.btnReaders.Name = "btnReaders";
-            this.btnReaders.Size = new System.Drawing.Size(200, 60);
-            this.btnReaders.TabIndex = 41;
-            this.btnReaders.Text = "Читачі";
-            this.btnReaders.UseVisualStyleBackColor = false;
-            // 
-            // btnIssueBooks
-            // 
-            this.btnIssueBooks.BackColor = System.Drawing.Color.Transparent;
-            this.btnIssueBooks.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnIssueBooks.FlatAppearance.BorderSize = 0;
-            this.btnIssueBooks.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Menu;
-            this.btnIssueBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIssueBooks.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIssueBooks.ForeColor = System.Drawing.Color.Black;
-            this.btnIssueBooks.Image = ((System.Drawing.Image)(resources.GetObject("btnIssueBooks.Image")));
-            this.btnIssueBooks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIssueBooks.Location = new System.Drawing.Point(-2, 274);
-            this.btnIssueBooks.Name = "btnIssueBooks";
-            this.btnIssueBooks.Size = new System.Drawing.Size(200, 60);
-            this.btnIssueBooks.TabIndex = 42;
-            this.btnIssueBooks.Text = "     Видача книг";
-            this.btnIssueBooks.UseVisualStyleBackColor = false;
-            this.btnIssueBooks.Click += new System.EventHandler(this.btnIssueBooks_Click);
+            this.toolTip1.ForeColor = System.Drawing.Color.Black;
             // 
             // Readers
             // 
@@ -618,5 +625,6 @@
         private System.Windows.Forms.Button btnReturnBooks;
         private System.Windows.Forms.Button btnReaders;
         private System.Windows.Forms.Button btnIssueBooks;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

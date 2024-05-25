@@ -17,6 +17,7 @@ namespace LibraryManagementSystem
         public Readers(string username)
         {
             InitializeComponent();
+            this.Load += new EventHandler(Form1_Load);
             this.SetStyle(ControlStyles.ResizeRedraw, true);
             lblUsername.Text = username; // Змінює заголовок форми
         }
@@ -192,7 +193,7 @@ namespace LibraryManagementSystem
         {
             if (txtReaderID.Text == "")
             {
-                MessageBox.Show("Заповніть усі поля.", "Помилка.");
+                MessageBox.Show("Заповніть усі поля", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -216,7 +217,7 @@ namespace LibraryManagementSystem
             }
             else
             {
-                MessageBox.Show("Оберіть рядок для редагування.", "Помилка.");
+                MessageBox.Show("Оберіть рядок для редагування", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -230,7 +231,7 @@ namespace LibraryManagementSystem
             }
             else
             {
-                MessageBox.Show("Оберіть рядок для видалення.", "Помилка.");
+                MessageBox.Show("Оберіть рядок для видалення", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -250,14 +251,62 @@ namespace LibraryManagementSystem
 
         private void btnSaveFile_Click(object sender, EventArgs e)
         {
+            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "Readers.xml");
 
+            try
+            {
+                DataSet ds = new DataSet();
+                DataTable dt = new DataTable();
+                dt.TableName = "Readers";
+                dt.Columns.Add("ReaderID");
+                dt.Columns.Add("ReaderName");
+                dt.Columns.Add("Contacts");
+                ds.Tables.Add(dt);
+
+                foreach (DataGridViewRow r in dataGridView1.Rows)
+                {
+                    DataRow row = ds.Tables["Readers"].NewRow();
+                    row["ReaderID"] = r.Cells[0].Value;
+                    row["ReaderName"] = r.Cells[1].Value;
+                    row["Contacts"] = r.Cells[2].Value;
+                    ds.Tables["Readers"].Rows.Add(row);
+                }
+                ds.WriteXml(filePath);
+                MessageBox.Show("Файл успішно збережений", "Успіх!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch
+            {
+                MessageBox.Show("Неможливо зберегти файл", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         // Кнопка Завантажити файл
 
         private void btnLoadFile_Click(object sender, EventArgs e)
         {
+            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "Readers.xml");
 
+            if (dataGridView1.Rows.Count > 0)
+            {
+                MessageBox.Show("Очистіть таблицю перед завантаженням нового файлу", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (File.Exists(filePath))
+            {
+                DataSet ds = new DataSet();
+                ds.ReadXml(filePath);
+
+                foreach (DataRow item in ds.Tables["Readers"].Rows)
+                {
+                    int n = dataGridView1.Rows.Add();
+                    dataGridView1.Rows[n].Cells[0].Value = item["ReaderID"];
+                    dataGridView1.Rows[n].Cells[1].Value = item["ReaderName"];
+                    dataGridView1.Rows[n].Cells[2].Value = item["Contacts"];
+                }
+            }
+            else
+            {
+                MessageBox.Show("Файл не знайдено", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         // Кнопка Очистити таблицю
@@ -270,7 +319,28 @@ namespace LibraryManagementSystem
             }
             else
             {
-                MessageBox.Show("Таблиця пуста.", "Помилка.");
+                MessageBox.Show("Таблиця порожня", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // Завантаження даних
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "Readers.xml");
+
+            if (File.Exists(filePath))
+            {
+                DataSet ds = new DataSet();
+                ds.ReadXml(filePath);
+
+                foreach (DataRow item in ds.Tables["Readers"].Rows)
+                {
+                    int n = dataGridView1.Rows.Add();
+                    dataGridView1.Rows[n].Cells[0].Value = item["ReaderID"];
+                    dataGridView1.Rows[n].Cells[1].Value = item["ReaderName"];
+                    dataGridView1.Rows[n].Cells[2].Value = item["Contacts"];
+                }
             }
         }
     }

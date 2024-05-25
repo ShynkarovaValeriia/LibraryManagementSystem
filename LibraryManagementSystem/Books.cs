@@ -19,6 +19,7 @@ namespace LibraryManagementSystem
         public Books(string username)
         {
             InitializeComponent();
+            this.Load += new EventHandler(Form1_Load);
             this.SetStyle(ControlStyles.ResizeRedraw, true);
             lblUsername.Text = username; // Змінює заголовок форми
         }
@@ -326,6 +327,28 @@ namespace LibraryManagementSystem
             else
             {
                 MessageBox.Show("Таблиця порожня", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // Завантаження даних
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "Books.xml");
+
+            if (File.Exists(filePath))
+            {
+                DataSet ds = new DataSet();
+                ds.ReadXml(filePath);
+
+                foreach (DataRow item in ds.Tables["Books"].Rows)
+                {
+                    int n = dataGridView1.Rows.Add();
+                    dataGridView1.Rows[n].Cells[0].Value = item["BookID"];
+                    dataGridView1.Rows[n].Cells[1].Value = item["BookName"];
+                    dataGridView1.Rows[n].Cells[2].Value = item["Author"];
+                    dataGridView1.Rows[n].Cells[3].Value = item["Genre"];
+                }
             }
         }
     }

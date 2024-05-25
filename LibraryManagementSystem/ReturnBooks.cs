@@ -17,6 +17,7 @@ namespace LibraryManagementSystem
         public ReturnBooks(string username)
         {
             InitializeComponent();
+            this.Load += new EventHandler(Form1_Load);
             this.SetStyle(ControlStyles.ResizeRedraw, true);
             lblUsername.Text = username; // Змінює заголовок форми
         }
@@ -192,7 +193,7 @@ namespace LibraryManagementSystem
         {
             if (cbIssueID.Text == "")
             {
-                MessageBox.Show("Заповніть усі поля.", "Помилка.");
+                MessageBox.Show("Заповніть усі поля", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -218,7 +219,7 @@ namespace LibraryManagementSystem
             }
             else
             {
-                MessageBox.Show("Оберіть рядок для редагування.", "Помилка.");
+                MessageBox.Show("Оберіть рядок для редагування", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -232,7 +233,7 @@ namespace LibraryManagementSystem
             }
             else
             {
-                MessageBox.Show("Оберіть рядок для видалення.", "Помилка.");
+                MessageBox.Show("Оберіть рядок для видалення", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -253,14 +254,72 @@ namespace LibraryManagementSystem
 
         private void btnSaveFile_Click(object sender, EventArgs e)
         {
+            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "ReturnBooks.xml");
 
+            int counter = 1;
+
+            try
+            {
+                DataSet ds = new DataSet();
+                DataTable dt = new DataTable();
+                dt.TableName = "ReturnBooks";
+                dt.Columns.Add("ReturnID");
+                dt.Columns.Add("IssueID");
+                dt.Columns.Add("ReturnDate");
+                dt.Columns.Add("BookID");
+                dt.Columns.Add("ReaderID");
+                ds.Tables.Add(dt);
+
+                foreach (DataGridViewRow r in dataGridView1.Rows)
+                {
+                    DataRow row = ds.Tables["ReturnBooks"].NewRow();
+                    row["ReturnID"] = counter.ToString();
+                    row["IssueID"] = r.Cells[1].Value;
+                    row["ReturnDate"] = r.Cells[2].Value;
+                    row["BookID"] = r.Cells[3].Value;
+                    row["ReaderID"] = r.Cells[4].Value;
+                    ds.Tables["ReturnBooks"].Rows.Add(row);
+
+                    counter++;
+                }
+                ds.WriteXml(filePath);
+                MessageBox.Show("Файл успішно збережений", "Успіх!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch
+            {
+                MessageBox.Show("Неможливо зберегти файл", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         // Кнопка Завантажити файл
 
         private void btnLoadFile_Click(object sender, EventArgs e)
         {
+            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "ReturnBooks.xml");
 
+            if (dataGridView1.Rows.Count > 0)
+            {
+                MessageBox.Show("Очистіть таблицю перед завантаженням нового файлу", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (File.Exists(filePath))
+            {
+                DataSet ds = new DataSet();
+                ds.ReadXml(filePath);
+
+                foreach (DataRow item in ds.Tables["ReturnBooks"].Rows)
+                {
+                    int n = dataGridView1.Rows.Add();
+                    dataGridView1.Rows[n].Cells[0].Value = item["ReturnID"];
+                    dataGridView1.Rows[n].Cells[1].Value = item["IssueID"];
+                    dataGridView1.Rows[n].Cells[2].Value = item["ReturnDate"];
+                    dataGridView1.Rows[n].Cells[3].Value = item["BookID"];
+                    dataGridView1.Rows[n].Cells[4].Value = item["ReaderID"];
+                }
+            }
+            else
+            {
+                MessageBox.Show("Файл не знайдено", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         // Кнопка Очистити таблицю
@@ -273,7 +332,30 @@ namespace LibraryManagementSystem
             }
             else
             {
-                MessageBox.Show("Таблиця пуста.", "Помилка.");
+                MessageBox.Show("Таблиця порожня", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // Завантаження даних
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "ReturnBooks.xml");
+
+            if (File.Exists(filePath))
+            {
+                DataSet ds = new DataSet();
+                ds.ReadXml(filePath);
+
+                foreach (DataRow item in ds.Tables["ReturnBooks"].Rows)
+                {
+                    int n = dataGridView1.Rows.Add();
+                    dataGridView1.Rows[n].Cells[0].Value = item["ReturnID"];
+                    dataGridView1.Rows[n].Cells[1].Value = item["IssueID"];
+                    dataGridView1.Rows[n].Cells[2].Value = item["ReturnDate"];
+                    dataGridView1.Rows[n].Cells[3].Value = item["BookID"];
+                    dataGridView1.Rows[n].Cells[4].Value = item["ReaderID"];
+                }
             }
         }
     }
