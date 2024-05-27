@@ -30,16 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblSignIn = new System.Windows.Forms.Label();
+            this.pictureIcon = new System.Windows.Forms.PictureBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.LinkRegister = new System.Windows.Forms.Button();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.chkRememberMe = new System.Windows.Forms.CheckBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblFirstVisit = new System.Windows.Forms.Label();
+            this.linkRegister = new System.Windows.Forms.Button();
+            this.pictureLine = new System.Windows.Forms.PictureBox();
+            this.pnlLogin = new System.Windows.Forms.Panel();
             this.btnMaximize = new System.Windows.Forms.PictureBox();
             this.btnNormal = new System.Windows.Forms.PictureBox();
             this.btnMinimize = new System.Windows.Forms.PictureBox();
@@ -48,9 +47,9 @@
             this.eyeOpen = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLine)).BeginInit();
+            this.pnlLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNormal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
@@ -59,29 +58,29 @@
             ((System.ComponentModel.ISupportInitialize)(this.eyeOpen)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lblSignIn
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(124, 170);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(283, 28);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Увійти до облікового запису";
+            this.lblSignIn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblSignIn.AutoSize = true;
+            this.lblSignIn.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSignIn.ForeColor = System.Drawing.Color.Black;
+            this.lblSignIn.Location = new System.Drawing.Point(124, 170);
+            this.lblSignIn.Name = "lblSignIn";
+            this.lblSignIn.Size = new System.Drawing.Size(283, 28);
+            this.lblSignIn.TabIndex = 0;
+            this.lblSignIn.Text = "Увійти до облікового запису";
             // 
-            // pictureBox2
+            // pictureIcon
             // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(164, 48);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(157, 135);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
+            this.pictureIcon.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureIcon.BackColor = System.Drawing.Color.Transparent;
+            this.pictureIcon.Image = ((System.Drawing.Image)(resources.GetObject("pictureIcon.Image")));
+            this.pictureIcon.Location = new System.Drawing.Point(164, 48);
+            this.pictureIcon.Name = "pictureIcon";
+            this.pictureIcon.Size = new System.Drawing.Size(157, 135);
+            this.pictureIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureIcon.TabIndex = 2;
+            this.pictureIcon.TabStop = false;
             // 
             // txtUsername
             // 
@@ -133,74 +132,67 @@
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // label2
+            // lblFirstVisit
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(31, 520);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 20);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Ви тут уперше?";
+            this.lblFirstVisit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblFirstVisit.AutoSize = true;
+            this.lblFirstVisit.BackColor = System.Drawing.Color.Transparent;
+            this.lblFirstVisit.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
+            this.lblFirstVisit.ForeColor = System.Drawing.Color.Black;
+            this.lblFirstVisit.Location = new System.Drawing.Point(31, 520);
+            this.lblFirstVisit.Name = "lblFirstVisit";
+            this.lblFirstVisit.Size = new System.Drawing.Size(114, 20);
+            this.lblFirstVisit.TabIndex = 6;
+            this.lblFirstVisit.Text = "Ви тут уперше?";
             // 
-            // LinkRegister
+            // linkRegister
             // 
-            this.LinkRegister.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.LinkRegister.BackColor = System.Drawing.Color.White;
-            this.LinkRegister.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LinkRegister.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
-            this.LinkRegister.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Menu;
-            this.LinkRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LinkRegister.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LinkRegister.ForeColor = System.Drawing.Color.Black;
-            this.LinkRegister.Location = new System.Drawing.Point(207, 511);
-            this.LinkRegister.Name = "LinkRegister";
-            this.LinkRegister.Size = new System.Drawing.Size(222, 38);
-            this.LinkRegister.TabIndex = 7;
-            this.LinkRegister.Text = "Створити обліковий запис";
-            this.LinkRegister.UseVisualStyleBackColor = false;
-            this.LinkRegister.Click += new System.EventHandler(this.LinkRegister_Click);
+            this.linkRegister.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.linkRegister.BackColor = System.Drawing.Color.White;
+            this.linkRegister.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.linkRegister.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.linkRegister.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Menu;
+            this.linkRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.linkRegister.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkRegister.ForeColor = System.Drawing.Color.Black;
+            this.linkRegister.Location = new System.Drawing.Point(207, 511);
+            this.linkRegister.Name = "linkRegister";
+            this.linkRegister.Size = new System.Drawing.Size(222, 38);
+            this.linkRegister.TabIndex = 7;
+            this.linkRegister.Text = "Створити обліковий запис";
+            this.linkRegister.UseVisualStyleBackColor = false;
+            this.linkRegister.Click += new System.EventHandler(this.linkRegister_Click);
             // 
-            // pictureBox5
+            // pictureLine
             // 
-            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.pictureLine.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(35, 494);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(394, 1);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox5.TabIndex = 9;
-            this.pictureBox5.TabStop = false;
+            this.pictureLine.BackColor = System.Drawing.Color.Transparent;
+            this.pictureLine.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureLine.Image = ((System.Drawing.Image)(resources.GetObject("pictureLine.Image")));
+            this.pictureLine.Location = new System.Drawing.Point(35, 494);
+            this.pictureLine.Name = "pictureLine";
+            this.pictureLine.Size = new System.Drawing.Size(394, 1);
+            this.pictureLine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureLine.TabIndex = 9;
+            this.pictureLine.TabStop = false;
             // 
-            // chkRememberMe
+            // pnlLogin
             // 
-            this.chkRememberMe.Location = new System.Drawing.Point(0, 0);
-            this.chkRememberMe.Name = "chkRememberMe";
-            this.chkRememberMe.Size = new System.Drawing.Size(104, 24);
-            this.chkRememberMe.TabIndex = 14;
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.pnlLogin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.btnMaximize);
-            this.panel1.Controls.Add(this.btnNormal);
-            this.panel1.Controls.Add(this.btnMinimize);
-            this.panel1.Controls.Add(this.btnClose);
-            this.panel1.Location = new System.Drawing.Point(2, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(460, 46);
-            this.panel1.TabIndex = 11;
-            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
-            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
-            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
+            this.pnlLogin.BackColor = System.Drawing.Color.White;
+            this.pnlLogin.Controls.Add(this.btnMaximize);
+            this.pnlLogin.Controls.Add(this.btnNormal);
+            this.pnlLogin.Controls.Add(this.btnMinimize);
+            this.pnlLogin.Controls.Add(this.btnClose);
+            this.pnlLogin.Location = new System.Drawing.Point(2, 2);
+            this.pnlLogin.Name = "pnlLogin";
+            this.pnlLogin.Size = new System.Drawing.Size(460, 46);
+            this.pnlLogin.TabIndex = 11;
+            this.pnlLogin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlLogin_MouseDown);
+            this.pnlLogin.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlLogin_MouseMove);
+            this.pnlLogin.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnlLogin_MouseUp);
             // 
             // btnMaximize
             // 
@@ -306,25 +298,24 @@
             this.ClientSize = new System.Drawing.Size(464, 579);
             this.Controls.Add(this.eyeClose);
             this.Controls.Add(this.eyeOpen);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.chkRememberMe);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.LinkRegister);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.pnlLogin);
+            this.Controls.Add(this.pictureLine);
+            this.Controls.Add(this.linkRegister);
+            this.Controls.Add(this.lblFirstVisit);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.lblSignIn);
+            this.Controls.Add(this.pictureIcon);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(464, 579);
             this.Name = "Login";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLine)).EndInit();
+            this.pnlLogin.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNormal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
@@ -337,16 +328,15 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lblSignIn;
+        private System.Windows.Forms.PictureBox pictureIcon;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button LinkRegister;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.CheckBox chkRememberMe;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblFirstVisit;
+        private System.Windows.Forms.Button linkRegister;
+        private System.Windows.Forms.PictureBox pictureLine;
+        private System.Windows.Forms.Panel pnlLogin;
         private System.Windows.Forms.PictureBox btnClose;
         private System.Windows.Forms.PictureBox eyeClose;
         private System.Windows.Forms.PictureBox eyeOpen;
