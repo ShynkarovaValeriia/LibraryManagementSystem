@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Books));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlButtons = new System.Windows.Forms.Panel();
             this.btnBooks = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureIcon = new System.Windows.Forms.PictureBox();
             this.btnReturnBooks = new System.Windows.Forms.Button();
             this.btnReaders = new System.Windows.Forms.Button();
             this.btnIssueBooks = new System.Windows.Forms.Button();
@@ -41,8 +41,8 @@
             this.btnNormal = new System.Windows.Forms.PictureBox();
             this.lblBooks = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureAvatar = new System.Windows.Forms.PictureBox();
+            this.pictureLine = new System.Windows.Forms.PictureBox();
             this.btnMinimize = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.PictureBox();
             this.lblBookID = new System.Windows.Forms.Label();
@@ -59,41 +59,42 @@
             this.btnSaveFile = new System.Windows.Forms.Button();
             this.btnClearTable = new System.Windows.Forms.Button();
             this.btnLoadFile = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.gridViewBooks = new System.Windows.Forms.DataGridView();
             this.book_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.book_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.author = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pnlButtons.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNormal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureAvatar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewBooks)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnlButtons
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pnlButtons.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.btnBooks);
-            this.panel1.Controls.Add(this.btnLogout);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.btnReturnBooks);
-            this.panel1.Controls.Add(this.btnReaders);
-            this.panel1.Controls.Add(this.btnIssueBooks);
-            this.panel1.Location = new System.Drawing.Point(2, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(198, 496);
-            this.panel1.TabIndex = 1;
-            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Books_MouseDown);
-            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Books_MouseMove);
-            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Books_MouseUp);
+            this.pnlButtons.BackColor = System.Drawing.Color.White;
+            this.pnlButtons.Controls.Add(this.btnBooks);
+            this.pnlButtons.Controls.Add(this.btnLogout);
+            this.pnlButtons.Controls.Add(this.pictureIcon);
+            this.pnlButtons.Controls.Add(this.btnReturnBooks);
+            this.pnlButtons.Controls.Add(this.btnReaders);
+            this.pnlButtons.Controls.Add(this.btnIssueBooks);
+            this.pnlButtons.ForeColor = System.Drawing.Color.Black;
+            this.pnlButtons.Location = new System.Drawing.Point(2, 2);
+            this.pnlButtons.Name = "pnlButtons";
+            this.pnlButtons.Size = new System.Drawing.Size(198, 496);
+            this.pnlButtons.TabIndex = 1;
+            this.pnlButtons.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Books_MouseDown);
+            this.pnlButtons.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Books_MouseMove);
+            this.pnlButtons.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Books_MouseUp);
             // 
             // btnBooks
             // 
@@ -133,23 +134,23 @@
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // pictureBox2
+            // pictureIcon
             // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(23, 11);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(151, 151);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox2, "Натисніть, щоб перейти в головне меню");
-            this.pictureBox2.Click += new System.EventHandler(this.btnHomePage_Click);
-            this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Books_MouseDown);
-            this.pictureBox2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Books_MouseMove);
-            this.pictureBox2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Books_MouseUp);
+            this.pictureIcon.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureIcon.BackColor = System.Drawing.Color.Transparent;
+            this.pictureIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureIcon.Image = ((System.Drawing.Image)(resources.GetObject("pictureIcon.Image")));
+            this.pictureIcon.Location = new System.Drawing.Point(23, 11);
+            this.pictureIcon.Name = "pictureIcon";
+            this.pictureIcon.Size = new System.Drawing.Size(151, 151);
+            this.pictureIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureIcon.TabIndex = 3;
+            this.pictureIcon.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureIcon, "Натисніть, щоб перейти в головне меню");
+            this.pictureIcon.Click += new System.EventHandler(this.btnHomePage_Click);
+            this.pictureIcon.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Books_MouseDown);
+            this.pictureIcon.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Books_MouseMove);
+            this.pictureIcon.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Books_MouseUp);
             // 
             // btnReturnBooks
             // 
@@ -255,41 +256,42 @@
             this.lblUsername.AutoSize = true;
             this.lblUsername.BackColor = System.Drawing.Color.Transparent;
             this.lblUsername.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.ForeColor = System.Drawing.Color.Black;
             this.lblUsername.Location = new System.Drawing.Point(835, 15);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(87, 23);
             this.lblUsername.TabIndex = 32;
             this.lblUsername.Text = "Username";
             // 
-            // pictureBox1
+            // pictureAvatar
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(801, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 31;
-            this.pictureBox1.TabStop = false;
+            this.pictureAvatar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureAvatar.BackColor = System.Drawing.Color.Transparent;
+            this.pictureAvatar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureAvatar.Image = ((System.Drawing.Image)(resources.GetObject("pictureAvatar.Image")));
+            this.pictureAvatar.Location = new System.Drawing.Point(801, 10);
+            this.pictureAvatar.Name = "pictureAvatar";
+            this.pictureAvatar.Size = new System.Drawing.Size(32, 32);
+            this.pictureAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureAvatar.TabIndex = 31;
+            this.pictureAvatar.TabStop = false;
             // 
-            // pictureBox5
+            // pictureLine
             // 
-            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.pictureLine.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(214, 47);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(825, 1);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox5.TabIndex = 30;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Books_MouseDown);
-            this.pictureBox5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Books_MouseMove);
-            this.pictureBox5.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Books_MouseUp);
+            this.pictureLine.BackColor = System.Drawing.Color.Transparent;
+            this.pictureLine.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureLine.Image = ((System.Drawing.Image)(resources.GetObject("pictureLine.Image")));
+            this.pictureLine.Location = new System.Drawing.Point(214, 47);
+            this.pictureLine.Name = "pictureLine";
+            this.pictureLine.Size = new System.Drawing.Size(825, 1);
+            this.pictureLine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureLine.TabIndex = 30;
+            this.pictureLine.TabStop = false;
+            this.pictureLine.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Books_MouseDown);
+            this.pictureLine.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Books_MouseMove);
+            this.pictureLine.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Books_MouseUp);
             // 
             // btnMinimize
             // 
@@ -335,9 +337,10 @@
             // txtBookID
             // 
             this.txtBookID.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtBookID.BackColor = System.Drawing.Color.White;
             this.txtBookID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBookID.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBookID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtBookID.ForeColor = System.Drawing.Color.Black;
             this.txtBookID.Location = new System.Drawing.Point(222, 98);
             this.txtBookID.Multiline = true;
             this.txtBookID.Name = "txtBookID";
@@ -347,9 +350,10 @@
             // txtBookName
             // 
             this.txtBookName.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtBookName.BackColor = System.Drawing.Color.White;
             this.txtBookName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBookName.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBookName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtBookName.ForeColor = System.Drawing.Color.Black;
             this.txtBookName.Location = new System.Drawing.Point(402, 98);
             this.txtBookName.Multiline = true;
             this.txtBookName.Name = "txtBookName";
@@ -372,9 +376,10 @@
             // txtAuthor
             // 
             this.txtAuthor.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtAuthor.BackColor = System.Drawing.Color.White;
             this.txtAuthor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAuthor.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAuthor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtAuthor.ForeColor = System.Drawing.Color.Black;
             this.txtAuthor.Location = new System.Drawing.Point(582, 98);
             this.txtAuthor.Multiline = true;
             this.txtAuthor.Name = "txtAuthor";
@@ -397,9 +402,10 @@
             // txtGenre
             // 
             this.txtGenre.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtGenre.BackColor = System.Drawing.Color.White;
             this.txtGenre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtGenre.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGenre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtGenre.ForeColor = System.Drawing.Color.Black;
             this.txtGenre.Location = new System.Drawing.Point(762, 98);
             this.txtGenre.Multiline = true;
             this.txtGenre.Name = "txtGenre";
@@ -527,25 +533,25 @@
             this.btnLoadFile.UseVisualStyleBackColor = false;
             this.btnLoadFile.Click += new System.EventHandler(this.btnLoadFile_Click);
             // 
-            // dataGridView1
+            // gridViewBooks
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.gridViewBooks.AllowUserToAddRows = false;
+            this.gridViewBooks.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.gridViewBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridViewBooks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.book_id,
             this.book_name,
             this.author,
             this.genre});
-            this.dataGridView1.Location = new System.Drawing.Point(222, 188);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(780, 245);
-            this.dataGridView1.TabIndex = 49;
-            this.dataGridView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick);
+            this.gridViewBooks.Location = new System.Drawing.Point(222, 188);
+            this.gridViewBooks.Name = "gridViewBooks";
+            this.gridViewBooks.RowHeadersWidth = 51;
+            this.gridViewBooks.RowTemplate.Height = 24;
+            this.gridViewBooks.Size = new System.Drawing.Size(780, 245);
+            this.gridViewBooks.TabIndex = 49;
+            this.gridViewBooks.MouseClick += new System.Windows.Forms.MouseEventHandler(this.gridViewBooks_MouseClick);
             // 
             // book_id
             // 
@@ -603,12 +609,12 @@
             this.Controls.Add(this.btnNormal);
             this.Controls.Add(this.lblBooks);
             this.Controls.Add(this.lblUsername);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pictureAvatar);
+            this.Controls.Add(this.pictureLine);
             this.Controls.Add(this.btnMinimize);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.pnlButtons);
+            this.Controls.Add(this.gridViewBooks);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(1050, 500);
             this.Name = "Books";
@@ -617,15 +623,15 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Books_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Books_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Books_MouseUp);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.pnlButtons.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNormal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureAvatar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewBooks)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -633,14 +639,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel pnlButtons;
+        private System.Windows.Forms.PictureBox pictureIcon;
         private System.Windows.Forms.PictureBox btnMaximize;
         private System.Windows.Forms.PictureBox btnNormal;
         private System.Windows.Forms.Label lblBooks;
         private System.Windows.Forms.Label lblUsername;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureAvatar;
+        private System.Windows.Forms.PictureBox pictureLine;
         private System.Windows.Forms.PictureBox btnMinimize;
         private System.Windows.Forms.PictureBox btnClose;
         private System.Windows.Forms.Button btnBooks;
@@ -662,7 +668,7 @@
         private System.Windows.Forms.Button btnSaveFile;
         private System.Windows.Forms.Button btnClearTable;
         private System.Windows.Forms.Button btnLoadFile;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView gridViewBooks;
         private System.Windows.Forms.DataGridViewTextBoxColumn book_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn book_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn author;

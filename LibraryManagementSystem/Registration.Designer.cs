@@ -30,66 +30,66 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registration));
-            this.LinkLogin = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.linkLogin = new System.Windows.Forms.Button();
+            this.lblAccExists = new System.Windows.Forms.Label();
             this.btnRegister = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblSignUp = new System.Windows.Forms.Label();
+            this.pictureIcon = new System.Windows.Forms.PictureBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlRegistration = new System.Windows.Forms.Panel();
             this.btnNormal = new System.Windows.Forms.PictureBox();
             this.btnMinimize = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.PictureBox();
             this.eyeOpen = new System.Windows.Forms.PictureBox();
             this.eyeClose = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureLine = new System.Windows.Forms.PictureBox();
             this.btnMaximize = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureIcon)).BeginInit();
+            this.pnlRegistration.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnNormal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eyeOpen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eyeClose)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximize)).BeginInit();
             this.SuspendLayout();
             // 
-            // LinkLogin
+            // linkLogin
             // 
-            this.LinkLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.LinkLogin.BackColor = System.Drawing.Color.White;
-            this.LinkLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LinkLogin.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
-            this.LinkLogin.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Menu;
-            this.LinkLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LinkLogin.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LinkLogin.ForeColor = System.Drawing.Color.Black;
-            this.LinkLogin.Location = new System.Drawing.Point(219, 517);
-            this.LinkLogin.Name = "LinkLogin";
-            this.LinkLogin.Size = new System.Drawing.Size(210, 38);
-            this.LinkLogin.TabIndex = 17;
-            this.LinkLogin.Text = "Авторизуватися";
-            this.LinkLogin.UseVisualStyleBackColor = false;
-            this.LinkLogin.Click += new System.EventHandler(this.LinkLogin_Click);
+            this.linkLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.linkLogin.BackColor = System.Drawing.Color.White;
+            this.linkLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.linkLogin.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.linkLogin.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Menu;
+            this.linkLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.linkLogin.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLogin.ForeColor = System.Drawing.Color.Black;
+            this.linkLogin.Location = new System.Drawing.Point(219, 517);
+            this.linkLogin.Name = "linkLogin";
+            this.linkLogin.Size = new System.Drawing.Size(210, 38);
+            this.linkLogin.TabIndex = 17;
+            this.linkLogin.Text = "Авторизуватися";
+            this.linkLogin.UseVisualStyleBackColor = false;
+            this.linkLogin.Click += new System.EventHandler(this.LinkLogin_Click);
             // 
-            // label2
+            // lblAccExists
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(31, 526);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 20);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Вже є аккаунт?";
+            this.lblAccExists.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblAccExists.AutoSize = true;
+            this.lblAccExists.BackColor = System.Drawing.Color.Transparent;
+            this.lblAccExists.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
+            this.lblAccExists.ForeColor = System.Drawing.Color.Black;
+            this.lblAccExists.Location = new System.Drawing.Point(31, 526);
+            this.lblAccExists.Name = "lblAccExists";
+            this.lblAccExists.Size = new System.Drawing.Size(111, 20);
+            this.lblAccExists.TabIndex = 16;
+            this.lblAccExists.Text = "Вже є аккаунт?";
             // 
             // btnRegister
             // 
@@ -113,6 +113,7 @@
             // 
             this.txtPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPassword.BackColor = System.Drawing.Color.White;
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPassword.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -129,6 +130,7 @@
             // 
             this.txtUsername.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtUsername.BackColor = System.Drawing.Color.White;
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUsername.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -139,32 +141,33 @@
             this.txtUsername.TabIndex = 13;
             this.txtUsername.Text = "Логін";
             // 
-            // label1
+            // lblSignUp
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(127, 84);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(263, 28);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Створити обліковий запис";
+            this.lblSignUp.AutoSize = true;
+            this.lblSignUp.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSignUp.ForeColor = System.Drawing.Color.Black;
+            this.lblSignUp.Location = new System.Drawing.Point(127, 84);
+            this.lblSignUp.Name = "lblSignUp";
+            this.lblSignUp.Size = new System.Drawing.Size(263, 28);
+            this.lblSignUp.TabIndex = 11;
+            this.lblSignUp.Text = "Створити обліковий запис";
             // 
-            // pictureBox2
+            // pictureIcon
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(13, 38);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(115, 115);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
+            this.pictureIcon.BackColor = System.Drawing.Color.Transparent;
+            this.pictureIcon.Image = ((System.Drawing.Image)(resources.GetObject("pictureIcon.Image")));
+            this.pictureIcon.Location = new System.Drawing.Point(13, 38);
+            this.pictureIcon.Name = "pictureIcon";
+            this.pictureIcon.Size = new System.Drawing.Size(115, 115);
+            this.pictureIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureIcon.TabIndex = 12;
+            this.pictureIcon.TabStop = false;
             // 
             // txtEmail
             // 
             this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEmail.BackColor = System.Drawing.Color.White;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEmail.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -179,6 +182,7 @@
             // 
             this.txtPhoneNumber.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPhoneNumber.BackColor = System.Drawing.Color.White;
             this.txtPhoneNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPhoneNumber.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhoneNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -189,21 +193,21 @@
             this.txtPhoneNumber.TabIndex = 19;
             this.txtPhoneNumber.Text = "Контактний номер";
             // 
-            // panel1
+            // pnlRegistration
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.pnlRegistration.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.btnNormal);
-            this.panel1.Controls.Add(this.btnMinimize);
-            this.panel1.Controls.Add(this.btnClose);
-            this.panel1.Location = new System.Drawing.Point(2, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(460, 46);
-            this.panel1.TabIndex = 20;
-            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
-            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
-            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
+            this.pnlRegistration.BackColor = System.Drawing.Color.White;
+            this.pnlRegistration.Controls.Add(this.btnNormal);
+            this.pnlRegistration.Controls.Add(this.btnMinimize);
+            this.pnlRegistration.Controls.Add(this.btnClose);
+            this.pnlRegistration.Location = new System.Drawing.Point(2, 2);
+            this.pnlRegistration.Name = "pnlRegistration";
+            this.pnlRegistration.Size = new System.Drawing.Size(460, 46);
+            this.pnlRegistration.TabIndex = 20;
+            this.pnlRegistration.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlRegistration_MouseDown);
+            this.pnlRegistration.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlRegistration_MouseMove);
+            this.pnlRegistration.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnlRegistration_MouseUp);
             // 
             // btnNormal
             // 
@@ -278,19 +282,19 @@
             this.toolTip1.SetToolTip(this.eyeClose, "Натисніть, щоб відобразити пароль");
             this.eyeClose.Click += new System.EventHandler(this.eyeClose_Click);
             // 
-            // pictureBox5
+            // pictureLine
             // 
-            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.pictureLine.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(35, 500);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(394, 1);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox5.TabIndex = 24;
-            this.pictureBox5.TabStop = false;
+            this.pictureLine.BackColor = System.Drawing.Color.Transparent;
+            this.pictureLine.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureLine.Image = ((System.Drawing.Image)(resources.GetObject("pictureLine.Image")));
+            this.pictureLine.Location = new System.Drawing.Point(35, 500);
+            this.pictureLine.Name = "pictureLine";
+            this.pictureLine.Size = new System.Drawing.Size(394, 1);
+            this.pictureLine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureLine.TabIndex = 24;
+            this.pictureLine.TabStop = false;
             // 
             // btnMaximize
             // 
@@ -314,32 +318,32 @@
             this.ClientSize = new System.Drawing.Size(464, 579);
             this.Controls.Add(this.eyeClose);
             this.Controls.Add(this.btnMaximize);
-            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pictureLine);
             this.Controls.Add(this.eyeOpen);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlRegistration);
             this.Controls.Add(this.txtPhoneNumber);
             this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.LinkLogin);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.linkLogin);
+            this.Controls.Add(this.lblAccExists);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.lblSignUp);
+            this.Controls.Add(this.pictureIcon);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(464, 579);
             this.Name = "Registration";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureIcon)).EndInit();
+            this.pnlRegistration.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnNormal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eyeOpen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eyeClose)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximize)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -347,19 +351,19 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button LinkLogin;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button linkLogin;
+        private System.Windows.Forms.Label lblAccExists;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lblSignUp;
+        private System.Windows.Forms.PictureBox pictureIcon;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtPhoneNumber;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlRegistration;
         private System.Windows.Forms.PictureBox eyeOpen;
         private System.Windows.Forms.PictureBox eyeClose;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureLine;
         private System.Windows.Forms.PictureBox btnMaximize;
         private System.Windows.Forms.PictureBox btnNormal;
         private System.Windows.Forms.PictureBox btnMinimize;

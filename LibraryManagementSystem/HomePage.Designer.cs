@@ -29,75 +29,88 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlButtons = new System.Windows.Forms.Panel();
             this.btnBooks = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnReturnBooks = new System.Windows.Forms.Button();
             this.btnReaders = new System.Windows.Forms.Button();
             this.btnIssueBooks = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureIcon = new System.Windows.Forms.PictureBox();
             this.btnMaximize = new System.Windows.Forms.PictureBox();
             this.btnMinimize = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureLine = new System.Windows.Forms.PictureBox();
+            this.pictureAvatar = new System.Windows.Forms.PictureBox();
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblHomePage = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.pnlTotalReaders = new System.Windows.Forms.Panel();
+            this.countTotalReaders = new System.Windows.Forms.Label();
+            this.lblTotalReaders = new System.Windows.Forms.Label();
+            this.pictureTotalReaders = new System.Windows.Forms.PictureBox();
+            this.pnlBorrows = new System.Windows.Forms.Panel();
+            this.countBorrows = new System.Windows.Forms.Label();
+            this.lblBorrows = new System.Windows.Forms.Label();
+            this.pictureBorrows = new System.Windows.Forms.PictureBox();
+            this.pnlTotalBooks = new System.Windows.Forms.Panel();
+            this.countTotalBooks = new System.Windows.Forms.Label();
+            this.lblTotalBooks = new System.Windows.Forms.Label();
+            this.pictureTotalBooks = new System.Windows.Forms.PictureBox();
+            this.pnlIssueBooks = new System.Windows.Forms.Panel();
+            this.countIssueBooks = new System.Windows.Forms.Label();
+            this.lblIssueBooks = new System.Windows.Forms.Label();
+            this.pictureIssueBooks = new System.Windows.Forms.PictureBox();
             this.btnNormal = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pnlPopularBooks = new System.Windows.Forms.Panel();
+            this.gridViewPopularBooks = new System.Windows.Forms.DataGridView();
+            this.Genre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.count_books = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblPopularBooks = new System.Windows.Forms.Label();
+            this.pnlPopularReaders = new System.Windows.Forms.Panel();
+            this.gridViewPopularReaders = new System.Windows.Forms.DataGridView();
+            this.reader_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.count_readers = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblPopularReaders = new System.Windows.Forms.Label();
+            this.pnlButtons.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLine)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureAvatar)).BeginInit();
+            this.pnlTotalReaders.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureTotalReaders)).BeginInit();
+            this.pnlBorrows.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBorrows)).BeginInit();
+            this.pnlTotalBooks.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureTotalBooks)).BeginInit();
+            this.pnlIssueBooks.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureIssueBooks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNormal)).BeginInit();
+            this.pnlPopularBooks.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewPopularBooks)).BeginInit();
+            this.pnlPopularReaders.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewPopularReaders)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnlButtons
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.pnlButtons.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.btnBooks);
-            this.panel1.Controls.Add(this.btnLogout);
-            this.panel1.Controls.Add(this.btnReturnBooks);
-            this.panel1.Controls.Add(this.btnReaders);
-            this.panel1.Controls.Add(this.btnIssueBooks);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Location = new System.Drawing.Point(2, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(198, 496);
-            this.panel1.TabIndex = 0;
-            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseDown);
-            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseMove);
-            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseUp);
+            this.pnlButtons.BackColor = System.Drawing.Color.White;
+            this.pnlButtons.Controls.Add(this.btnBooks);
+            this.pnlButtons.Controls.Add(this.btnLogout);
+            this.pnlButtons.Controls.Add(this.btnReturnBooks);
+            this.pnlButtons.Controls.Add(this.btnReaders);
+            this.pnlButtons.Controls.Add(this.btnIssueBooks);
+            this.pnlButtons.Controls.Add(this.pictureIcon);
+            this.pnlButtons.ForeColor = System.Drawing.Color.Black;
+            this.pnlButtons.Location = new System.Drawing.Point(2, 2);
+            this.pnlButtons.Name = "pnlButtons";
+            this.pnlButtons.Size = new System.Drawing.Size(198, 496);
+            this.pnlButtons.TabIndex = 0;
+            this.pnlButtons.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseDown);
+            this.pnlButtons.MouseMove += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseMove);
+            this.pnlButtons.MouseUp += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseUp);
             // 
             // btnBooks
             // 
@@ -195,20 +208,20 @@
             this.btnIssueBooks.UseVisualStyleBackColor = false;
             this.btnIssueBooks.Click += new System.EventHandler(this.btnIssueBooks_Click);
             // 
-            // pictureBox2
+            // pictureIcon
             // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(26, 11);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(151, 151);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseDown);
-            this.pictureBox2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseMove);
-            this.pictureBox2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseUp);
+            this.pictureIcon.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureIcon.BackColor = System.Drawing.Color.Transparent;
+            this.pictureIcon.Image = ((System.Drawing.Image)(resources.GetObject("pictureIcon.Image")));
+            this.pictureIcon.Location = new System.Drawing.Point(26, 11);
+            this.pictureIcon.Name = "pictureIcon";
+            this.pictureIcon.Size = new System.Drawing.Size(151, 151);
+            this.pictureIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureIcon.TabIndex = 3;
+            this.pictureIcon.TabStop = false;
+            this.pictureIcon.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseDown);
+            this.pictureIcon.MouseMove += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseMove);
+            this.pictureIcon.MouseUp += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseUp);
             // 
             // btnMaximize
             // 
@@ -252,35 +265,35 @@
             this.btnClose.TabStop = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // pictureBox5
+            // pictureLine
             // 
-            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.pictureLine.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(210, 47);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(870, 1);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox5.TabIndex = 18;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseDown);
-            this.pictureBox5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseMove);
-            this.pictureBox5.MouseUp += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseUp);
+            this.pictureLine.BackColor = System.Drawing.Color.Transparent;
+            this.pictureLine.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureLine.Image = ((System.Drawing.Image)(resources.GetObject("pictureLine.Image")));
+            this.pictureLine.Location = new System.Drawing.Point(210, 47);
+            this.pictureLine.Name = "pictureLine";
+            this.pictureLine.Size = new System.Drawing.Size(870, 1);
+            this.pictureLine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureLine.TabIndex = 18;
+            this.pictureLine.TabStop = false;
+            this.pictureLine.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseDown);
+            this.pictureLine.MouseMove += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseMove);
+            this.pictureLine.MouseUp += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseUp);
             // 
-            // pictureBox1
+            // pictureAvatar
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(841, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 19;
-            this.pictureBox1.TabStop = false;
+            this.pictureAvatar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureAvatar.BackColor = System.Drawing.Color.Transparent;
+            this.pictureAvatar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureAvatar.Image = ((System.Drawing.Image)(resources.GetObject("pictureAvatar.Image")));
+            this.pictureAvatar.Location = new System.Drawing.Point(841, 10);
+            this.pictureAvatar.Name = "pictureAvatar";
+            this.pictureAvatar.Size = new System.Drawing.Size(32, 32);
+            this.pictureAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureAvatar.TabIndex = 19;
+            this.pictureAvatar.TabStop = false;
             // 
             // lblUsername
             // 
@@ -288,6 +301,7 @@
             this.lblUsername.AutoSize = true;
             this.lblUsername.BackColor = System.Drawing.Color.Transparent;
             this.lblUsername.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.ForeColor = System.Drawing.Color.Black;
             this.lblUsername.Location = new System.Drawing.Point(875, 15);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(87, 23);
@@ -306,231 +320,225 @@
             this.lblHomePage.TabIndex = 21;
             this.lblHomePage.Text = "Головна сторінка";
             // 
-            // panel2
+            // pnlTotalReaders
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Location = new System.Drawing.Point(211, 61);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 100);
-            this.panel2.TabIndex = 22;
-            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseDown);
-            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseMove);
-            this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseUp);
+            this.pnlTotalReaders.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnlTotalReaders.BackColor = System.Drawing.Color.White;
+            this.pnlTotalReaders.Controls.Add(this.countTotalReaders);
+            this.pnlTotalReaders.Controls.Add(this.lblTotalReaders);
+            this.pnlTotalReaders.Controls.Add(this.pictureTotalReaders);
+            this.pnlTotalReaders.ForeColor = System.Drawing.Color.Black;
+            this.pnlTotalReaders.Location = new System.Drawing.Point(651, 61);
+            this.pnlTotalReaders.Name = "pnlTotalReaders";
+            this.pnlTotalReaders.Size = new System.Drawing.Size(200, 100);
+            this.pnlTotalReaders.TabIndex = 22;
+            this.pnlTotalReaders.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseDown);
+            this.pnlTotalReaders.MouseMove += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseMove);
+            this.pnlTotalReaders.MouseUp += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseUp);
             // 
-            // label6
+            // countTotalReaders
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Yu Gothic UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(74, 30);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 45);
-            this.label6.TabIndex = 29;
-            this.label6.Text = "0";
+            this.countTotalReaders.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.countTotalReaders.AutoSize = true;
+            this.countTotalReaders.BackColor = System.Drawing.Color.Transparent;
+            this.countTotalReaders.Font = new System.Drawing.Font("Yu Gothic UI", 19.8F, System.Drawing.FontStyle.Bold);
+            this.countTotalReaders.ForeColor = System.Drawing.Color.Black;
+            this.countTotalReaders.Location = new System.Drawing.Point(74, 30);
+            this.countTotalReaders.Name = "countTotalReaders";
+            this.countTotalReaders.Size = new System.Drawing.Size(38, 45);
+            this.countTotalReaders.TabIndex = 29;
+            this.countTotalReaders.Text = "0";
             // 
-            // label1
+            // lblTotalReaders
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(7, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 23);
-            this.label1.TabIndex = 28;
-            this.label1.Text = "Total Visitors";
+            this.lblTotalReaders.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTotalReaders.AutoSize = true;
+            this.lblTotalReaders.BackColor = System.Drawing.Color.Transparent;
+            this.lblTotalReaders.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
+            this.lblTotalReaders.ForeColor = System.Drawing.Color.Black;
+            this.lblTotalReaders.Location = new System.Drawing.Point(7, 7);
+            this.lblTotalReaders.Name = "lblTotalReaders";
+            this.lblTotalReaders.Size = new System.Drawing.Size(142, 23);
+            this.lblTotalReaders.TabIndex = 28;
+            this.lblTotalReaders.Text = "Кількість читачів";
             // 
-            // pictureBox3
+            // pictureTotalReaders
             // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(152, 30);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 27;
-            this.pictureBox3.TabStop = false;
+            this.pictureTotalReaders.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureTotalReaders.BackColor = System.Drawing.Color.Transparent;
+            this.pictureTotalReaders.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureTotalReaders.Image = ((System.Drawing.Image)(resources.GetObject("pictureTotalReaders.Image")));
+            this.pictureTotalReaders.Location = new System.Drawing.Point(152, 30);
+            this.pictureTotalReaders.Name = "pictureTotalReaders";
+            this.pictureTotalReaders.Size = new System.Drawing.Size(32, 32);
+            this.pictureTotalReaders.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureTotalReaders.TabIndex = 27;
+            this.pictureTotalReaders.TabStop = false;
             // 
-            // panel3
+            // pnlBorrows
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.pictureBox4);
-            this.panel3.Location = new System.Drawing.Point(430, 61);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 100);
-            this.panel3.TabIndex = 23;
-            this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseDown);
-            this.panel3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseMove);
-            this.panel3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseUp);
+            this.pnlBorrows.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnlBorrows.BackColor = System.Drawing.Color.White;
+            this.pnlBorrows.Controls.Add(this.countBorrows);
+            this.pnlBorrows.Controls.Add(this.lblBorrows);
+            this.pnlBorrows.Controls.Add(this.pictureBorrows);
+            this.pnlBorrows.ForeColor = System.Drawing.Color.Black;
+            this.pnlBorrows.Location = new System.Drawing.Point(870, 61);
+            this.pnlBorrows.Name = "pnlBorrows";
+            this.pnlBorrows.Size = new System.Drawing.Size(200, 100);
+            this.pnlBorrows.TabIndex = 23;
+            this.pnlBorrows.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseDown);
+            this.pnlBorrows.MouseMove += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseMove);
+            this.pnlBorrows.MouseUp += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseUp);
             // 
-            // label7
+            // countBorrows
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Yu Gothic UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(74, 30);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(38, 45);
-            this.label7.TabIndex = 30;
-            this.label7.Text = "0";
+            this.countBorrows.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.countBorrows.AutoSize = true;
+            this.countBorrows.BackColor = System.Drawing.Color.Transparent;
+            this.countBorrows.Font = new System.Drawing.Font("Yu Gothic UI", 19.8F, System.Drawing.FontStyle.Bold);
+            this.countBorrows.ForeColor = System.Drawing.Color.Black;
+            this.countBorrows.Location = new System.Drawing.Point(74, 30);
+            this.countBorrows.Name = "countBorrows";
+            this.countBorrows.Size = new System.Drawing.Size(38, 45);
+            this.countBorrows.TabIndex = 30;
+            this.countBorrows.Text = "0";
             // 
-            // label3
+            // lblBorrows
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(7, 7);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 23);
-            this.label3.TabIndex = 29;
-            this.label3.Text = "New Members";
+            this.lblBorrows.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblBorrows.AutoSize = true;
+            this.lblBorrows.BackColor = System.Drawing.Color.Transparent;
+            this.lblBorrows.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
+            this.lblBorrows.ForeColor = System.Drawing.Color.Black;
+            this.lblBorrows.Location = new System.Drawing.Point(7, 7);
+            this.lblBorrows.Name = "lblBorrows";
+            this.lblBorrows.Size = new System.Drawing.Size(91, 23);
+            this.lblBorrows.TabIndex = 29;
+            this.lblBorrows.Text = "Боржники";
             // 
-            // pictureBox4
+            // pictureBorrows
             // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(152, 30);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 28;
-            this.pictureBox4.TabStop = false;
+            this.pictureBorrows.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBorrows.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBorrows.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureBorrows.Image = ((System.Drawing.Image)(resources.GetObject("pictureBorrows.Image")));
+            this.pictureBorrows.Location = new System.Drawing.Point(152, 30);
+            this.pictureBorrows.Name = "pictureBorrows";
+            this.pictureBorrows.Size = new System.Drawing.Size(32, 32);
+            this.pictureBorrows.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBorrows.TabIndex = 28;
+            this.pictureBorrows.TabStop = false;
             // 
-            // panel4
+            // pnlTotalBooks
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.label8);
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.pictureBox6);
-            this.panel4.Location = new System.Drawing.Point(651, 61);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(200, 100);
-            this.panel4.TabIndex = 23;
-            this.panel4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseDown);
-            this.panel4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseMove);
-            this.panel4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseUp);
+            this.pnlTotalBooks.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnlTotalBooks.BackColor = System.Drawing.Color.White;
+            this.pnlTotalBooks.Controls.Add(this.countTotalBooks);
+            this.pnlTotalBooks.Controls.Add(this.lblTotalBooks);
+            this.pnlTotalBooks.Controls.Add(this.pictureTotalBooks);
+            this.pnlTotalBooks.ForeColor = System.Drawing.Color.Black;
+            this.pnlTotalBooks.Location = new System.Drawing.Point(211, 61);
+            this.pnlTotalBooks.Name = "pnlTotalBooks";
+            this.pnlTotalBooks.Size = new System.Drawing.Size(200, 100);
+            this.pnlTotalBooks.TabIndex = 23;
+            this.pnlTotalBooks.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseDown);
+            this.pnlTotalBooks.MouseMove += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseMove);
+            this.pnlTotalBooks.MouseUp += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseUp);
             // 
-            // label8
+            // countTotalBooks
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Yu Gothic UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(74, 30);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(38, 45);
-            this.label8.TabIndex = 31;
-            this.label8.Text = "0";
+            this.countTotalBooks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.countTotalBooks.AutoSize = true;
+            this.countTotalBooks.BackColor = System.Drawing.Color.Transparent;
+            this.countTotalBooks.Font = new System.Drawing.Font("Yu Gothic UI", 19.8F, System.Drawing.FontStyle.Bold);
+            this.countTotalBooks.ForeColor = System.Drawing.Color.Black;
+            this.countTotalBooks.Location = new System.Drawing.Point(74, 30);
+            this.countTotalBooks.Name = "countTotalBooks";
+            this.countTotalBooks.Size = new System.Drawing.Size(38, 45);
+            this.countTotalBooks.TabIndex = 31;
+            this.countTotalBooks.Text = "0";
             // 
-            // label4
+            // lblTotalBooks
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(7, 7);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(133, 23);
-            this.label4.TabIndex = 30;
-            this.label4.Text = "Borrowed Books";
+            this.lblTotalBooks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTotalBooks.AutoSize = true;
+            this.lblTotalBooks.BackColor = System.Drawing.Color.Transparent;
+            this.lblTotalBooks.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
+            this.lblTotalBooks.ForeColor = System.Drawing.Color.Black;
+            this.lblTotalBooks.Location = new System.Drawing.Point(7, 7);
+            this.lblTotalBooks.Name = "lblTotalBooks";
+            this.lblTotalBooks.Size = new System.Drawing.Size(118, 23);
+            this.lblTotalBooks.TabIndex = 30;
+            this.lblTotalBooks.Text = "Кількість книг";
             // 
-            // pictureBox6
+            // pictureTotalBooks
             // 
-            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(152, 30);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 29;
-            this.pictureBox6.TabStop = false;
+            this.pictureTotalBooks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureTotalBooks.BackColor = System.Drawing.Color.Transparent;
+            this.pictureTotalBooks.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureTotalBooks.Image = ((System.Drawing.Image)(resources.GetObject("pictureTotalBooks.Image")));
+            this.pictureTotalBooks.Location = new System.Drawing.Point(152, 30);
+            this.pictureTotalBooks.Name = "pictureTotalBooks";
+            this.pictureTotalBooks.Size = new System.Drawing.Size(32, 32);
+            this.pictureTotalBooks.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureTotalBooks.TabIndex = 29;
+            this.pictureTotalBooks.TabStop = false;
             // 
-            // panel5
+            // pnlIssueBooks
             // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.label9);
-            this.panel5.Controls.Add(this.label5);
-            this.panel5.Controls.Add(this.pictureBox7);
-            this.panel5.Location = new System.Drawing.Point(874, 61);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(200, 100);
-            this.panel5.TabIndex = 23;
-            this.panel5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseDown);
-            this.panel5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseMove);
-            this.panel5.MouseUp += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseUp);
+            this.pnlIssueBooks.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnlIssueBooks.BackColor = System.Drawing.Color.White;
+            this.pnlIssueBooks.Controls.Add(this.countIssueBooks);
+            this.pnlIssueBooks.Controls.Add(this.lblIssueBooks);
+            this.pnlIssueBooks.Controls.Add(this.pictureIssueBooks);
+            this.pnlIssueBooks.ForeColor = System.Drawing.Color.Black;
+            this.pnlIssueBooks.Location = new System.Drawing.Point(430, 61);
+            this.pnlIssueBooks.Name = "pnlIssueBooks";
+            this.pnlIssueBooks.Size = new System.Drawing.Size(200, 100);
+            this.pnlIssueBooks.TabIndex = 23;
+            this.pnlIssueBooks.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseDown);
+            this.pnlIssueBooks.MouseMove += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseMove);
+            this.pnlIssueBooks.MouseUp += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseUp);
             // 
-            // label9
+            // countIssueBooks
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Yu Gothic UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(74, 30);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(38, 45);
-            this.label9.TabIndex = 32;
-            this.label9.Text = "0";
+            this.countIssueBooks.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.countIssueBooks.AutoSize = true;
+            this.countIssueBooks.BackColor = System.Drawing.Color.Transparent;
+            this.countIssueBooks.Font = new System.Drawing.Font("Yu Gothic UI", 19.8F, System.Drawing.FontStyle.Bold);
+            this.countIssueBooks.ForeColor = System.Drawing.Color.Black;
+            this.countIssueBooks.Location = new System.Drawing.Point(74, 30);
+            this.countIssueBooks.Name = "countIssueBooks";
+            this.countIssueBooks.Size = new System.Drawing.Size(38, 45);
+            this.countIssueBooks.TabIndex = 32;
+            this.countIssueBooks.Text = "0";
             // 
-            // label5
+            // lblIssueBooks
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(7, 7);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(125, 23);
-            this.label5.TabIndex = 31;
-            this.label5.Text = "Overdue Books";
+            this.lblIssueBooks.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblIssueBooks.AutoSize = true;
+            this.lblIssueBooks.BackColor = System.Drawing.Color.Transparent;
+            this.lblIssueBooks.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
+            this.lblIssueBooks.ForeColor = System.Drawing.Color.Black;
+            this.lblIssueBooks.Location = new System.Drawing.Point(7, 7);
+            this.lblIssueBooks.Name = "lblIssueBooks";
+            this.lblIssueBooks.Size = new System.Drawing.Size(133, 23);
+            this.lblIssueBooks.TabIndex = 31;
+            this.lblIssueBooks.Text = "Позичені книги";
             // 
-            // pictureBox7
+            // pictureIssueBooks
             // 
-            this.pictureBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(152, 30);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 30;
-            this.pictureBox7.TabStop = false;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Location = new System.Drawing.Point(211, 175);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(419, 310);
-            this.panel6.TabIndex = 24;
-            this.panel6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseDown);
-            this.panel6.MouseMove += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseMove);
-            this.panel6.MouseUp += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseUp);
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.Location = new System.Drawing.Point(651, 175);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(423, 310);
-            this.panel7.TabIndex = 25;
-            this.panel7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseDown);
-            this.panel7.MouseMove += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseMove);
-            this.panel7.MouseUp += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseUp);
+            this.pictureIssueBooks.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureIssueBooks.BackColor = System.Drawing.Color.Transparent;
+            this.pictureIssueBooks.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureIssueBooks.Image = ((System.Drawing.Image)(resources.GetObject("pictureIssueBooks.Image")));
+            this.pictureIssueBooks.Location = new System.Drawing.Point(152, 30);
+            this.pictureIssueBooks.Name = "pictureIssueBooks";
+            this.pictureIssueBooks.Size = new System.Drawing.Size(32, 32);
+            this.pictureIssueBooks.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureIssueBooks.TabIndex = 30;
+            this.pictureIssueBooks.TabStop = false;
             // 
             // btnNormal
             // 
@@ -547,55 +555,176 @@
             this.btnNormal.Visible = false;
             this.btnNormal.Click += new System.EventHandler(this.btnNormal_Click);
             // 
+            // pnlPopularBooks
+            // 
+            this.pnlPopularBooks.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnlPopularBooks.BackColor = System.Drawing.Color.White;
+            this.pnlPopularBooks.Controls.Add(this.gridViewPopularBooks);
+            this.pnlPopularBooks.Controls.Add(this.lblPopularBooks);
+            this.pnlPopularBooks.ForeColor = System.Drawing.Color.Black;
+            this.pnlPopularBooks.Location = new System.Drawing.Point(211, 175);
+            this.pnlPopularBooks.MaximumSize = new System.Drawing.Size(890, 930);
+            this.pnlPopularBooks.Name = "pnlPopularBooks";
+            this.pnlPopularBooks.Size = new System.Drawing.Size(419, 310);
+            this.pnlPopularBooks.TabIndex = 27;
+            this.pnlPopularBooks.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseDown);
+            this.pnlPopularBooks.MouseMove += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseMove);
+            this.pnlPopularBooks.MouseUp += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseUp);
+            // 
+            // gridViewPopularBooks
+            // 
+            this.gridViewPopularBooks.AllowUserToAddRows = false;
+            this.gridViewPopularBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridViewPopularBooks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Genre,
+            this.count_books});
+            this.gridViewPopularBooks.Location = new System.Drawing.Point(11, 42);
+            this.gridViewPopularBooks.Name = "gridViewPopularBooks";
+            this.gridViewPopularBooks.RowHeadersWidth = 51;
+            this.gridViewPopularBooks.RowTemplate.Height = 24;
+            this.gridViewPopularBooks.Size = new System.Drawing.Size(397, 257);
+            this.gridViewPopularBooks.TabIndex = 0;
+            // 
+            // Genre
+            // 
+            this.Genre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Genre.HeaderText = "Тематика";
+            this.Genre.MinimumWidth = 6;
+            this.Genre.Name = "Genre";
+            // 
+            // count_books
+            // 
+            this.count_books.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.count_books.HeaderText = "Кількість";
+            this.count_books.MinimumWidth = 6;
+            this.count_books.Name = "count_books";
+            // 
+            // lblPopularBooks
+            // 
+            this.lblPopularBooks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPopularBooks.AutoSize = true;
+            this.lblPopularBooks.BackColor = System.Drawing.Color.Transparent;
+            this.lblPopularBooks.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
+            this.lblPopularBooks.ForeColor = System.Drawing.Color.Black;
+            this.lblPopularBooks.Location = new System.Drawing.Point(7, 7);
+            this.lblPopularBooks.Name = "lblPopularBooks";
+            this.lblPopularBooks.Size = new System.Drawing.Size(216, 23);
+            this.lblPopularBooks.TabIndex = 30;
+            this.lblPopularBooks.Text = "Найпопулярніші тематики";
+            // 
+            // pnlPopularReaders
+            // 
+            this.pnlPopularReaders.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnlPopularReaders.BackColor = System.Drawing.Color.White;
+            this.pnlPopularReaders.Controls.Add(this.gridViewPopularReaders);
+            this.pnlPopularReaders.Controls.Add(this.lblPopularReaders);
+            this.pnlPopularReaders.ForeColor = System.Drawing.Color.Black;
+            this.pnlPopularReaders.Location = new System.Drawing.Point(651, 175);
+            this.pnlPopularReaders.MaximumSize = new System.Drawing.Size(890, 930);
+            this.pnlPopularReaders.Name = "pnlPopularReaders";
+            this.pnlPopularReaders.Size = new System.Drawing.Size(419, 310);
+            this.pnlPopularReaders.TabIndex = 27;
+            this.pnlPopularReaders.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseDown);
+            this.pnlPopularReaders.MouseMove += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseMove);
+            this.pnlPopularReaders.MouseUp += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseUp);
+            // 
+            // gridViewPopularReaders
+            // 
+            this.gridViewPopularReaders.AllowUserToAddRows = false;
+            this.gridViewPopularReaders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridViewPopularReaders.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.reader_id,
+            this.count_readers});
+            this.gridViewPopularReaders.Location = new System.Drawing.Point(11, 42);
+            this.gridViewPopularReaders.Name = "gridViewPopularReaders";
+            this.gridViewPopularReaders.RowHeadersWidth = 51;
+            this.gridViewPopularReaders.RowTemplate.Height = 24;
+            this.gridViewPopularReaders.Size = new System.Drawing.Size(397, 257);
+            this.gridViewPopularReaders.TabIndex = 0;
+            // 
+            // reader_id
+            // 
+            this.reader_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.reader_id.HeaderText = "Номер читача";
+            this.reader_id.MinimumWidth = 6;
+            this.reader_id.Name = "reader_id";
+            // 
+            // count_readers
+            // 
+            this.count_readers.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.count_readers.HeaderText = "Кількість";
+            this.count_readers.MinimumWidth = 6;
+            this.count_readers.Name = "count_readers";
+            // 
+            // lblPopularReaders
+            // 
+            this.lblPopularReaders.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPopularReaders.AutoSize = true;
+            this.lblPopularReaders.BackColor = System.Drawing.Color.Transparent;
+            this.lblPopularReaders.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F);
+            this.lblPopularReaders.ForeColor = System.Drawing.Color.Black;
+            this.lblPopularReaders.Location = new System.Drawing.Point(7, 7);
+            this.lblPopularReaders.Name = "lblPopularReaders";
+            this.lblPopularReaders.Size = new System.Drawing.Size(152, 23);
+            this.lblPopularReaders.TabIndex = 30;
+            this.lblPopularReaders.Text = "Найчастіші читачі";
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(1090, 500);
+            this.Controls.Add(this.pnlPopularReaders);
+            this.Controls.Add(this.pnlPopularBooks);
             this.Controls.Add(this.btnMaximize);
             this.Controls.Add(this.btnNormal);
-            this.Controls.Add(this.panel7);
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnlTotalBooks);
+            this.Controls.Add(this.pnlIssueBooks);
+            this.Controls.Add(this.pnlBorrows);
+            this.Controls.Add(this.pnlTotalReaders);
             this.Controls.Add(this.lblHomePage);
             this.Controls.Add(this.lblUsername);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pictureAvatar);
+            this.Controls.Add(this.pictureLine);
             this.Controls.Add(this.btnMinimize);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlButtons);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(1090, 500);
             this.Name = "HomePage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomePage";
+            this.Load += new System.EventHandler(this.HomePage_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseUp);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.pnlButtons.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLine)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureAvatar)).EndInit();
+            this.pnlTotalReaders.ResumeLayout(false);
+            this.pnlTotalReaders.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureTotalReaders)).EndInit();
+            this.pnlBorrows.ResumeLayout(false);
+            this.pnlBorrows.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBorrows)).EndInit();
+            this.pnlTotalBooks.ResumeLayout(false);
+            this.pnlTotalBooks.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureTotalBooks)).EndInit();
+            this.pnlIssueBooks.ResumeLayout(false);
+            this.pnlIssueBooks.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureIssueBooks)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNormal)).EndInit();
+            this.pnlPopularBooks.ResumeLayout(false);
+            this.pnlPopularBooks.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewPopularBooks)).EndInit();
+            this.pnlPopularReaders.ResumeLayout(false);
+            this.pnlPopularReaders.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewPopularReaders)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -603,38 +732,46 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel pnlButtons;
+        private System.Windows.Forms.PictureBox pictureIcon;
         private System.Windows.Forms.PictureBox btnMaximize;
         private System.Windows.Forms.PictureBox btnMinimize;
         private System.Windows.Forms.PictureBox btnClose;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureLine;
+        private System.Windows.Forms.PictureBox pictureAvatar;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label lblHomePage;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel pnlTotalReaders;
+        private System.Windows.Forms.Panel pnlBorrows;
+        private System.Windows.Forms.Panel pnlTotalBooks;
+        private System.Windows.Forms.Panel pnlIssueBooks;
         private System.Windows.Forms.PictureBox btnNormal;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btnBooks;
+        private System.Windows.Forms.PictureBox pictureTotalReaders;
+        private System.Windows.Forms.PictureBox pictureBorrows;
+        private System.Windows.Forms.PictureBox pictureTotalBooks;
+        private System.Windows.Forms.PictureBox pictureIssueBooks;
+        private System.Windows.Forms.Label lblTotalReaders;
+        private System.Windows.Forms.Label lblBorrows;
+        private System.Windows.Forms.Label lblTotalBooks;
+        private System.Windows.Forms.Label lblIssueBooks;
+        private System.Windows.Forms.Label countTotalReaders;
+        private System.Windows.Forms.Label countBorrows;
+        private System.Windows.Forms.Label countTotalBooks;
+        private System.Windows.Forms.Label countIssueBooks;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnReturnBooks;
         private System.Windows.Forms.Button btnReaders;
         private System.Windows.Forms.Button btnIssueBooks;
+        private System.Windows.Forms.Button btnBooks;
+        private System.Windows.Forms.Panel pnlPopularBooks;
+        private System.Windows.Forms.Panel pnlPopularReaders;
+        private System.Windows.Forms.DataGridView gridViewPopularBooks;
+        private System.Windows.Forms.Label lblPopularBooks;
+        private System.Windows.Forms.Label lblPopularReaders;
+        private System.Windows.Forms.DataGridView gridViewPopularReaders;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Genre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn count_books;
+        private System.Windows.Forms.DataGridViewTextBoxColumn reader_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn count_readers;
     }
 }

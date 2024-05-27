@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace LibraryManagementSystem
 {
@@ -17,12 +13,303 @@ namespace LibraryManagementSystem
         public ReturnBooks(string username)
         {
             InitializeComponent();
-            this.Load += new EventHandler(Form1_Load);
+            this.Load += new EventHandler(ReturnBooks_Load);
             this.SetStyle(ControlStyles.ResizeRedraw, true);
             lblUsername.Text = username; // Змінює заголовок форми
         }
 
-        // Змінювання розміру вікна
+        // Кнопка Головна сторінка
+
+        private void btnHomePage_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            string username = lblUsername.Text;
+            HomePage homepageForm = new HomePage(char.ToUpper(username[0]) + username.Substring(1));
+            homepageForm.Show();
+        }
+
+        // Кнопка Книги
+
+        private void btnBooks_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            string username = lblUsername.Text;
+            Books booksForm = new Books(char.ToUpper(username[0]) + username.Substring(1));
+            booksForm.Show();
+        }
+
+        // Кнопка Читачі
+
+        private void btnReaders_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            string username = lblUsername.Text;
+            Readers readersForm = new Readers(char.ToUpper(username[0]) + username.Substring(1));
+            readersForm.Show();
+        }
+
+        // Кнопка Видача книг
+
+        private void btnIssueBooks_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            string username = lblUsername.Text;
+            IssueBooks issuesForm = new IssueBooks(char.ToUpper(username[0]) + username.Substring(1));
+            issuesForm.Show();
+        }
+
+        // Кнопка Вийти із акаунту
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login loginForm = new Login();
+            loginForm.Show();
+        }
+
+        // Кнопка Додати
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            if (txtIssueID.Text == "" || txtBookID.Text == "" || txtReaderID.Text == "")
+            {
+                MessageBox.Show("Заповніть усі поля", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                int n = gridViewReturnBooks.Rows.Add();
+                gridViewReturnBooks.Rows[n].Cells[0].Value = n + 1;
+                gridViewReturnBooks.Rows[n].Cells[1].Value = txtIssueID.Text;
+                gridViewReturnBooks.Rows[n].Cells[2].Value = dtPickerReturn.Text;
+                gridViewReturnBooks.Rows[n].Cells[3].Value = txtBookID.Text;
+                gridViewReturnBooks.Rows[n].Cells[4].Value = txtReaderID.Text;
+            }
+        }
+
+        // Кнопка Редагувати
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (gridViewReturnBooks.SelectedRows.Count > 0)
+            {
+                int n = gridViewReturnBooks.SelectedRows[0].Index;
+                gridViewReturnBooks.Rows[n].Cells[0].Value = n + 1;
+                gridViewReturnBooks.Rows[n].Cells[1].Value = txtIssueID.Text;
+                gridViewReturnBooks.Rows[n].Cells[2].Value = dtPickerReturn.Text;
+                gridViewReturnBooks.Rows[n].Cells[3].Value = txtBookID.Text;
+                gridViewReturnBooks.Rows[n].Cells[4].Value = txtReaderID.Text;
+            }
+            else
+            {
+                MessageBox.Show("Оберіть рядок для редагування", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // Кнопка Видалення
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            if (gridViewReturnBooks.SelectedRows.Count > 0)
+            {
+                gridViewReturnBooks.Rows.RemoveAt(gridViewReturnBooks.SelectedRows[0].Index);
+            }
+            else
+            {
+                MessageBox.Show("Оберіть рядок для видалення", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // выбор нужной строки для редактирования
+
+        private void gridViewReturnBooks_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (gridViewReturnBooks.SelectedRows.Count > 0)
+            {
+                txtIssueID.Text = gridViewReturnBooks.SelectedRows[0].Cells[1].Value?.ToString();
+                dtPickerReturn.Text = gridViewReturnBooks.SelectedRows[0].Cells[2].Value?.ToString();
+                txtBookID.Text = gridViewReturnBooks.SelectedRows[0].Cells[3].Value?.ToString();
+                txtReaderID.Text = gridViewReturnBooks.SelectedRows[0].Cells[4].Value?.ToString();
+            }
+        }
+
+        // Кнопка Зберегти як файл
+
+        private void btnSaveFile_Click(object sender, EventArgs e)
+        {
+            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "Books.xml");
+
+            int counter = 1;
+
+            try
+            {
+                DataSet ds;
+
+                // Перевіряємо, чи файл існує
+                if (File.Exists(filePath))
+                {
+                    ds = new DataSet();
+                    ds.ReadXml(filePath);
+                }
+                else
+                {
+                    ds = new DataSet();
+                }
+
+                DataTable dt;
+                // Перевіряємо, чи таблиця "ReturnBooks" вже існує
+                if (ds.Tables.Contains("ReturnBooks"))
+                {
+                    dt = ds.Tables["ReturnBooks"];
+                    dt.Rows.Clear();
+                }
+                else
+                {
+                    dt = new DataTable();
+                    dt.TableName = "ReturnBooks";
+                    dt.Columns.Add("ReturnID");
+                    dt.Columns.Add("IssueID");
+                    dt.Columns.Add("ReturnDate");
+                    dt.Columns.Add("BookID");
+                    dt.Columns.Add("ReaderID");
+                    ds.Tables.Add(dt);
+                }
+
+                foreach (DataGridViewRow r in gridViewReturnBooks.Rows)
+                {
+                    DataRow row = dt.NewRow();
+                    row["ReturnID"] = counter.ToString();
+                    row["IssueID"] = r.Cells[1].Value;
+                    row["ReturnDate"] = r.Cells[2].Value;
+                    row["BookID"] = r.Cells[3].Value;
+                    row["ReaderID"] = r.Cells[4].Value;
+                    dt.Rows.Add(row);
+
+                    counter++;
+                }
+
+                ds.WriteXml(filePath);
+                MessageBox.Show("Файл успішно збережений", "Успіх!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch
+            {
+                MessageBox.Show("Неможливо зберегти файл", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+        // Кнопка Завантажити файл
+
+        private void btnLoadFile_Click(object sender, EventArgs e)
+        {
+            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "Books.xml");
+
+            if (gridViewReturnBooks.Rows.Count > 0)
+            {
+                MessageBox.Show("Очистіть таблицю перед завантаженням нового файлу", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (File.Exists(filePath))
+            {
+                DataSet ds = new DataSet();
+                ds.ReadXml(filePath);
+
+                if (ds.Tables.Contains("ReturnBooks"))
+                {
+                    foreach (DataRow item in ds.Tables["ReturnBooks"].Rows)
+                    {
+                        int n = gridViewReturnBooks.Rows.Add();
+                        gridViewReturnBooks.Rows[n].Cells[0].Value = item["ReturnID"];
+                        gridViewReturnBooks.Rows[n].Cells[1].Value = item["IssueID"];
+                        gridViewReturnBooks.Rows[n].Cells[2].Value = item["ReturnDate"];
+                        gridViewReturnBooks.Rows[n].Cells[3].Value = item["BookID"];
+                        gridViewReturnBooks.Rows[n].Cells[4].Value = item["ReaderID"];
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Таблиця 'Поверенення книг' не знайдена у файлі", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Файл не знайдено", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // Кнопка Очистити таблицю
+
+        private void btnClearTable_Click(object sender, EventArgs e)
+        {
+            if (gridViewReturnBooks.Rows.Count > 0)
+            {
+                gridViewReturnBooks.Rows.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Таблиця порожня", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // Завантаження даних
+
+        private void ReturnBooks_Load(object sender, EventArgs e)
+        {
+            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "Books.xml");
+
+            if (File.Exists(filePath))
+            {
+                DataSet ds = new DataSet();
+                ds.ReadXml(filePath);
+
+                if (ds.Tables.Contains("ReturnBooks"))
+                {
+                    foreach (DataRow item in ds.Tables["ReturnBooks"].Rows)
+                    {
+                        int n = gridViewReturnBooks.Rows.Add();
+                        gridViewReturnBooks.Rows[n].Cells[0].Value = item["ReturnID"];
+                        gridViewReturnBooks.Rows[n].Cells[1].Value = item["IssueID"];
+                        gridViewReturnBooks.Rows[n].Cells[2].Value = item["ReturnDate"];
+                        gridViewReturnBooks.Rows[n].Cells[3].Value = item["BookID"];
+                        gridViewReturnBooks.Rows[n].Cells[4].Value = item["ReaderID"];
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Таблиця 'Поверенення книг' не знайдена у файлі", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Файл не знайдено", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // Кнопка Закрити
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMaximize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            btnMaximize.Visible = false;
+            btnNormal.Visible = true;
+        }
+
+        private void btnNormal_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            btnMaximize.Visible = true;
+            btnNormal.Visible = false;
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        // Настройка змінювання розміру вікна форми
 
         private const int cGrip = 16;
         private const int cCaption = 0;
@@ -83,7 +370,7 @@ namespace LibraryManagementSystem
             base.WndProc(ref m);
         }
 
-        // Перетягування вікна
+        // Настройка перетягування вікна форми
 
         private bool dragging = false;
         private Point dragCursorPoint;
@@ -108,255 +395,6 @@ namespace LibraryManagementSystem
         private void Books_MouseUp(object sender, MouseEventArgs e)
         {
             dragging = false;
-        }
-
-        // Кнопка Закрити
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void btnMaximize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Maximized;
-            btnMaximize.Visible = false;
-            btnNormal.Visible = true;
-        }
-
-        private void btnNormal_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Normal;
-            btnMaximize.Visible = true;
-            btnNormal.Visible = false;
-        }
-
-        private void btnMinimize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        // Кнопка Головна сторінка
-
-        private void btnHomePage_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            string username = lblUsername.Text;
-            HomePage homepageForm = new HomePage(char.ToUpper(username[0]) + username.Substring(1));
-            homepageForm.Show();
-        }
-
-        // Кнопка Книги
-
-        private void btnBooks_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            string username = lblUsername.Text;
-            Books booksForm = new Books(char.ToUpper(username[0]) + username.Substring(1));
-            booksForm.Show();
-        }
-
-        // Кнопка Читачі
-
-        private void btnReaders_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            string username = lblUsername.Text;
-            Readers readersForm = new Readers(char.ToUpper(username[0]) + username.Substring(1));
-            readersForm.Show();
-        }
-
-        // Кнопка Видача книг
-
-        private void btnIssueBooks_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            string username = lblUsername.Text;
-            IssueBooks issuesForm = new IssueBooks(char.ToUpper(username[0]) + username.Substring(1));
-            issuesForm.Show();
-        }
-
-        // Кнопка Вийти із акаунту
-
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Login loginForm = new Login();
-            loginForm.Show();
-        }
-
-        // Написання коду
-
-        // Кнопка Додати
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            if (cbIssueID.Text == "")
-            {
-                MessageBox.Show("Заповніть усі поля", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                int n = dataGridView1.Rows.Add();
-                dataGridView1.Rows[n].Cells[1].Value = cbIssueID.Text;
-                dataGridView1.Rows[n].Cells[2].Value = dateTimePicker1.Text;
-                dataGridView1.Rows[n].Cells[3].Value = txtBookID.Text;
-                dataGridView1.Rows[n].Cells[4].Value = txtReaderID.Text;
-            }
-        }
-
-        // Кнопка Редагувати
-
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            if (dataGridView1.SelectedRows.Count > 0)
-            {
-                int n = dataGridView1.SelectedRows[0].Index;
-                dataGridView1.Rows[n].Cells[1].Value = cbIssueID.Text;
-                dataGridView1.Rows[n].Cells[2].Value = dateTimePicker1.Text;
-                dataGridView1.Rows[n].Cells[3].Value = txtBookID.Text;
-                dataGridView1.Rows[n].Cells[4].Value = txtReaderID.Text;
-            }
-            else
-            {
-                MessageBox.Show("Оберіть рядок для редагування", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        // Кнопка Видалення
-
-        private void btnRemove_Click(object sender, EventArgs e)
-        {
-            if (dataGridView1.SelectedRows.Count > 0)
-            {
-                dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
-            }
-            else
-            {
-                MessageBox.Show("Оберіть рядок для видалення", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        // выбор нужной строки для редактирования
-
-        private void dataGridView1_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (dataGridView1.SelectedRows.Count > 0)
-            {
-                cbIssueID.Text = dataGridView1.SelectedRows[0].Cells[1].Value?.ToString();
-                dateTimePicker1.Text = dataGridView1.SelectedRows[0].Cells[2].Value?.ToString();
-                txtBookID.Text = dataGridView1.SelectedRows[0].Cells[3].Value?.ToString();
-                txtReaderID.Text = dataGridView1.SelectedRows[0].Cells[4].Value?.ToString();
-            }
-        }
-
-        // Кнопка Зберегти як файл
-
-        private void btnSaveFile_Click(object sender, EventArgs e)
-        {
-            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "ReturnBooks.xml");
-
-            int counter = 1;
-
-            try
-            {
-                DataSet ds = new DataSet();
-                DataTable dt = new DataTable();
-                dt.TableName = "ReturnBooks";
-                dt.Columns.Add("ReturnID");
-                dt.Columns.Add("IssueID");
-                dt.Columns.Add("ReturnDate");
-                dt.Columns.Add("BookID");
-                dt.Columns.Add("ReaderID");
-                ds.Tables.Add(dt);
-
-                foreach (DataGridViewRow r in dataGridView1.Rows)
-                {
-                    DataRow row = ds.Tables["ReturnBooks"].NewRow();
-                    row["ReturnID"] = counter.ToString();
-                    row["IssueID"] = r.Cells[1].Value;
-                    row["ReturnDate"] = r.Cells[2].Value;
-                    row["BookID"] = r.Cells[3].Value;
-                    row["ReaderID"] = r.Cells[4].Value;
-                    ds.Tables["ReturnBooks"].Rows.Add(row);
-
-                    counter++;
-                }
-                ds.WriteXml(filePath);
-                MessageBox.Show("Файл успішно збережений", "Успіх!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch
-            {
-                MessageBox.Show("Неможливо зберегти файл", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        // Кнопка Завантажити файл
-
-        private void btnLoadFile_Click(object sender, EventArgs e)
-        {
-            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "ReturnBooks.xml");
-
-            if (dataGridView1.Rows.Count > 0)
-            {
-                MessageBox.Show("Очистіть таблицю перед завантаженням нового файлу", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if (File.Exists(filePath))
-            {
-                DataSet ds = new DataSet();
-                ds.ReadXml(filePath);
-
-                foreach (DataRow item in ds.Tables["ReturnBooks"].Rows)
-                {
-                    int n = dataGridView1.Rows.Add();
-                    dataGridView1.Rows[n].Cells[0].Value = item["ReturnID"];
-                    dataGridView1.Rows[n].Cells[1].Value = item["IssueID"];
-                    dataGridView1.Rows[n].Cells[2].Value = item["ReturnDate"];
-                    dataGridView1.Rows[n].Cells[3].Value = item["BookID"];
-                    dataGridView1.Rows[n].Cells[4].Value = item["ReaderID"];
-                }
-            }
-            else
-            {
-                MessageBox.Show("Файл не знайдено", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        // Кнопка Очистити таблицю
-
-        private void btnClearTable_Click(object sender, EventArgs e)
-        {
-            if (dataGridView1.Rows.Count > 0)
-            {
-                dataGridView1.Rows.Clear();
-            }
-            else
-            {
-                MessageBox.Show("Таблиця порожня", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        // Завантаження даних
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "ReturnBooks.xml");
-
-            if (File.Exists(filePath))
-            {
-                DataSet ds = new DataSet();
-                ds.ReadXml(filePath);
-
-                foreach (DataRow item in ds.Tables["ReturnBooks"].Rows)
-                {
-                    int n = dataGridView1.Rows.Add();
-                    dataGridView1.Rows[n].Cells[0].Value = item["ReturnID"];
-                    dataGridView1.Rows[n].Cells[1].Value = item["IssueID"];
-                    dataGridView1.Rows[n].Cells[2].Value = item["ReturnDate"];
-                    dataGridView1.Rows[n].Cells[3].Value = item["BookID"];
-                    dataGridView1.Rows[n].Cells[4].Value = item["ReaderID"];
-                }
-            }
         }
     }
 }

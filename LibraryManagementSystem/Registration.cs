@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LibraryManagementSystem
@@ -17,100 +14,11 @@ namespace LibraryManagementSystem
         public Registration()
         {
             InitializeComponent();
-            this.SetStyle(ControlStyles.ResizeRedraw, true);
             SetPlaceholders();
+            this.SetStyle(ControlStyles.ResizeRedraw, true);
         }
 
-        private void SetPlaceholders()
-        {
-            SetPlaceholder(txtUsername, "Логін");
-            SetPlaceholder(txtPassword, "Пароль");
-            SetPlaceholder(txtEmail, "Електронна адреса");
-            SetPlaceholder(txtPhoneNumber, "Контактний номер");
-        }
-
-        private void SetPlaceholder(TextBox textBox, string placeholder)
-        {
-            textBox.Text = placeholder;
-            textBox.ForeColor = System.Drawing.Color.Gray;
-
-            textBox.Enter += (s, e) => {
-                if (textBox.Text == placeholder)
-                {
-                    textBox.Text = "";
-                    textBox.ForeColor = System.Drawing.Color.Black;
-                }
-            };
-
-            textBox.Leave += (s, e) => {
-                if (string.IsNullOrWhiteSpace(textBox.Text))
-                {
-                    textBox.Text = placeholder;
-                    textBox.ForeColor = System.Drawing.Color.Gray;
-                }
-            };
-        }
-
-        private const int cGrip = 16;
-        private const int cCaption = 0;
-
-        protected override void WndProc(ref Message m)
-        {
-            if (m.Msg == 0x84)
-            {
-                Point pos = new Point(m.LParam.ToInt32());
-                pos = this.PointToClient(pos);
-                if (pos.Y < cCaption)
-                {
-                    m.Result = (IntPtr)2; // HTCAPTION: Переміщення вікна
-                    return;
-                }
-                // Перевірка, чи натиснуто на границі форми
-                if (pos.X <= cGrip && pos.Y <= cGrip)
-                {
-                    m.Result = (IntPtr)13; // HTTOPLEFT: Зміна ширини та висоти зліва зверху
-                    return;
-                }
-                if (pos.X >= this.ClientSize.Width - cGrip && pos.Y <= cGrip)
-                {
-                    m.Result = (IntPtr)14; // HTTOPRIGHT: Зміна ширини та висоти справа зверху
-                    return;
-                }
-                if (pos.X <= cGrip && pos.Y >= this.ClientSize.Height - cGrip)
-                {
-                    m.Result = (IntPtr)16; // HTBOTTOMLEFT: Зміна ширини та висоти зліва знизу
-                    return;
-                }
-                if (pos.X >= this.ClientSize.Width - cGrip && pos.Y >= this.ClientSize.Height - cGrip)
-                {
-                    m.Result = (IntPtr)17; // HTBOTTOMRIGHT: Зміна ширини та висоти справа знизу
-                    return;
-                }
-                if (pos.X <= cGrip)
-                {
-                    m.Result = (IntPtr)10; // HTLEFT: Зміна ширини зліва
-                    return;
-                }
-                if (pos.X >= this.ClientSize.Width - cGrip)
-                {
-                    m.Result = (IntPtr)11; // HTRIGHT: Зміна ширини справа
-                    return;
-                }
-                if (pos.Y <= cGrip)
-                {
-                    m.Result = (IntPtr)12; // HTTOP: Зміна висоти зверху
-                    return;
-                }
-                if (pos.Y >= this.ClientSize.Height - cGrip)
-                {
-                    m.Result = (IntPtr)15; // HTBOTTOM: Зміна висоти знизу
-                    return;
-                }
-            }
-            base.WndProc(ref m);
-        }
-
-        // Перехід між Формою авторизації та реєстрації
+        // Перехід між Формою реєстрації та авторизації
 
         private void LinkLogin_Click(object sender, EventArgs e)
         {
@@ -221,33 +129,6 @@ namespace LibraryManagementSystem
             return Regex.IsMatch(number, @"^\d+$");
         }
 
-        // Перетягування панелі
-
-        private bool dragging = false;
-        private Point dragCursorPoint;
-        private Point dragFormPoint;
-
-        private void panel1_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (dragging)
-            {
-                Point dif = Point.Subtract(Cursor.Position, new Size(dragCursorPoint));
-                this.Location = Point.Add(dragFormPoint, new Size(dif));
-            }
-        }
-
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
-        {
-            dragging = true;
-            dragCursorPoint = Cursor.Position;
-            dragFormPoint = this.Location;
-        }
-
-        private void panel1_MouseUp(object sender, MouseEventArgs e)
-        {
-            dragging = false;
-        }
-
         // Кнопка Закрити
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -274,7 +155,7 @@ namespace LibraryManagementSystem
             this.WindowState = FormWindowState.Minimized;
         }
 
-        // Кнопки приховування паролю
+        // Кнопка приховати пароль
 
         private void eyeOpen_Click(object sender, EventArgs e)
         {
@@ -285,6 +166,8 @@ namespace LibraryManagementSystem
             eyeClose.Visible = true;
             eyeOpen.Visible = false;
         }
+
+        // Кнопка показати пароль
 
         private void eyeClose_Click(object sender, EventArgs e)
         {
@@ -321,7 +204,127 @@ namespace LibraryManagementSystem
             else
             {
                 txtPassword.PasswordChar = '\0'; // Пароль видно
-            }    
+            }
+        }
+
+        // Плейсхолдери
+
+        private void SetPlaceholders()
+        {
+            SetPlaceholder(txtUsername, "Логін");
+            SetPlaceholder(txtPassword, "Пароль");
+            SetPlaceholder(txtEmail, "Електронна адреса");
+            SetPlaceholder(txtPhoneNumber, "Контактний номер");
+        }
+
+        private void SetPlaceholder(TextBox textBox, string placeholder)
+        {
+            textBox.Text = placeholder;
+            textBox.ForeColor = System.Drawing.Color.Gray;
+
+            textBox.Enter += (s, e) => {
+                if (textBox.Text == placeholder)
+                {
+                    textBox.Text = "";
+                    textBox.ForeColor = System.Drawing.Color.Black;
+                }
+            };
+
+            textBox.Leave += (s, e) => {
+                if (string.IsNullOrWhiteSpace(textBox.Text))
+                {
+                    textBox.Text = placeholder;
+                    textBox.ForeColor = System.Drawing.Color.Gray;
+                }
+            };
+        }
+
+        // Настройка змінювання розміру вікна форми
+
+        private const int cGrip = 16;
+        private const int cCaption = 0;
+
+        protected override void WndProc(ref Message m)
+        {
+            if (m.Msg == 0x84)
+            {
+                Point pos = new Point(m.LParam.ToInt32());
+                pos = this.PointToClient(pos);
+                if (pos.Y < cCaption)
+                {
+                    m.Result = (IntPtr)2; // HTCAPTION: Переміщення вікна
+                    return;
+                }
+                // Перевірка, чи натиснуто на границі форми
+                if (pos.X <= cGrip && pos.Y <= cGrip)
+                {
+                    m.Result = (IntPtr)13; // HTTOPLEFT: Зміна ширини та висоти зліва зверху
+                    return;
+                }
+                if (pos.X >= this.ClientSize.Width - cGrip && pos.Y <= cGrip)
+                {
+                    m.Result = (IntPtr)14; // HTTOPRIGHT: Зміна ширини та висоти справа зверху
+                    return;
+                }
+                if (pos.X <= cGrip && pos.Y >= this.ClientSize.Height - cGrip)
+                {
+                    m.Result = (IntPtr)16; // HTBOTTOMLEFT: Зміна ширини та висоти зліва знизу
+                    return;
+                }
+                if (pos.X >= this.ClientSize.Width - cGrip && pos.Y >= this.ClientSize.Height - cGrip)
+                {
+                    m.Result = (IntPtr)17; // HTBOTTOMRIGHT: Зміна ширини та висоти справа знизу
+                    return;
+                }
+                if (pos.X <= cGrip)
+                {
+                    m.Result = (IntPtr)10; // HTLEFT: Зміна ширини зліва
+                    return;
+                }
+                if (pos.X >= this.ClientSize.Width - cGrip)
+                {
+                    m.Result = (IntPtr)11; // HTRIGHT: Зміна ширини справа
+                    return;
+                }
+                if (pos.Y <= cGrip)
+                {
+                    m.Result = (IntPtr)12; // HTTOP: Зміна висоти зверху
+                    return;
+                }
+                if (pos.Y >= this.ClientSize.Height - cGrip)
+                {
+                    m.Result = (IntPtr)15; // HTBOTTOM: Зміна висоти знизу
+                    return;
+                }
+            }
+            base.WndProc(ref m);
+        }
+
+        // Настройка перетягування панелі форми
+
+        private bool dragging = false;
+        private Point dragCursorPoint;
+        private Point dragFormPoint;
+
+        private void pnlRegistration_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (dragging)
+            {
+                Point dif = Point.Subtract(Cursor.Position, new Size(dragCursorPoint));
+                this.Location = Point.Add(dragFormPoint, new Size(dif));
+            }
+        }
+
+        private void pnlRegistration_MouseDown(object sender, MouseEventArgs e)
+        {
+            dragging = true;
+            dragCursorPoint = Cursor.Position;
+            dragFormPoint = this.Location;
+        }
+
+        private void pnlRegistration_MouseUp(object sender, MouseEventArgs e)
+        {
+            dragging = false;
         }
     }
 }
