@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Users>
+    <UserID>63ce8c03-a688-49e0-946a-e93e3d659b83</UserID>
+    <Username>admin</Username>
+    <Password>123</Password>
+    <Email>admin@gmail.com</Email>
+    <PhoneNumber>123456</PhoneNumber>
+  </Users>
+</NewDataSet>

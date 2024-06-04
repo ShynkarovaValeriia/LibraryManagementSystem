@@ -1,0 +1,281 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Books>
+    <BookID>1</BookID>
+    <BookName>Маленький принц</BookName>
+    <Author>Антуан де Сент-Екзюпері</Author>
+    <Genre>Казка</Genre>
+  </Books>
+  <Books>
+    <BookID>2</BookID>
+    <BookName>Володар перснів</BookName>
+    <Author>Дж. Р. Р. Толкін</Author>
+    <Genre>Фентезі</Genre>
+  </Books>
+  <Books>
+    <BookID>3</BookID>
+    <BookName>Четверте крило</BookName>
+    <Author>Ребекка Яррос</Author>
+    <Genre>Фентезі</Genre>
+  </Books>
+  <Books>
+    <BookID>4</BookID>
+    <BookName>1984</BookName>
+    <Author>Джордж Орвелл</Author>
+    <Genre>Антиутопія</Genre>
+  </Books>
+  <Books>
+    <BookID>5</BookID>
+    <BookName>Вечірка на Геловін</BookName>
+    <Author>	Агата Крісті</Author>
+    <Genre>Детектив</Genre>
+  </Books>
+  <Books>
+    <BookID>6</BookID>
+    <BookName>Гаррі Поттер</BookName>
+    <Author>	Джоан Роулінг</Author>
+    <Genre>Фентезі</Genre>
+  </Books>
+  <Books>
+    <BookID>7</BookID>
+    <BookName>Хроніки Нарнії</BookName>
+    <Author>К. С. Льюїс</Author>
+    <Genre>Фентезі</Genre>
+  </Books>
+  <Books>
+    <BookID>8</BookID>
+    <BookName>Пригоди Тома Сойєра</BookName>
+    <Author>Марк Твен</Author>
+    <Genre>Пригоди</Genre>
+  </Books>
+  <Books>
+    <BookID>9</BookID>
+    <BookName>Фауст</BookName>
+    <Author>Йоганн Вольфганг Гете</Author>
+    <Genre>Трагедія</Genre>
+  </Books>
+  <Books>
+    <BookID>10</BookID>
+    <BookName>Аліса в Країні Див</BookName>
+    <Author>Льюїс Керрол</Author>
+    <Genre>Казка</Genre>
+  </Books>
+  <Books>
+    <BookID>11</BookID>
+    <BookName>Гра престолів</BookName>
+    <Author>Джордж Р. Р. Мартін</Author>
+    <Genre>Фентезі</Genre>
+  </Books>
+  <Books>
+    <BookID>12</BookID>
+    <BookName>Персі Джексон і викрадач блискавок</BookName>
+    <Author>Джордж Р. Р. Рік Ріордан</Author>
+    <Genre>Фентезі</Genre>
+  </Books>
+  <Books>
+    <BookID>13</BookID>
+    <BookName>Відьмак</BookName>
+    <Author>Анджей Сапковський</Author>
+    <Genre>Фентезі</Genre>
+  </Books>
+  <Books>
+    <BookID>14</BookID>
+    <BookName>Шерлок Голмс</BookName>
+    <Author>	Артур Конан Дойл</Author>
+    <Genre>Детектив</Genre>
+  </Books>
+  <Books>
+    <BookID>15</BookID>
+    <BookName>Дон Кіхот</BookName>
+    <Author>Мігель де Сервантес</Author>
+    <Genre>Класична література
+</Genre>
+  </Books>
+  <Books>
+    <BookID>16</BookID>
+    <BookName>Джейн Ейр</BookName>
+    <Author>Шарлотта Бронте</Author>
+    <Genre>Класична література
+</Genre>
+  </Books>
+  <Books>
+    <BookID>17</BookID>
+    <BookName>Мобі Дік</BookName>
+    <Author>	Герман Мелвілл</Author>
+    <Genre>Пригоди</Genre>
+  </Books>
+  <Books>
+    <BookID>18</BookID>
+    <BookName>Голодні ігри</BookName>
+    <Author>Сюзанна Коллінз</Author>
+    <Genre>Антиутопія</Genre>
+  </Books>
+  <Books>
+    <BookID>19</BookID>
+    <BookName>Дюна</BookName>
+    <Author>	Френк Герберт</Author>
+    <Genre>Наукова фантастика</Genre>
+  </Books>
+  <Books>
+    <BookID>20</BookID>
+    <BookName>451° за Фаренгейтом</BookName>
+    <Author>	Рей Бредбері</Author>
+    <Genre>	Антиутопія</Genre>
+  </Books>
+  <Books>
+    <BookID>21</BookID>
+    <BookName>Подорож до центру Землі</BookName>
+    <Author>Жуль Верн</Author>
+    <Genre>Пригоди</Genre>
+  </Books>
+  <Books>
+    <BookID>22</BookID>
+    <BookName>Дракула</BookName>
+    <Author>Брем Стокер</Author>
+    <Genre>Класична література
+</Genre>
+  </Books>
+  <Readers>
+    <ReaderID>1</ReaderID>
+    <ReaderName>Іванов Іван Іванович</ReaderName>
+    <Contacts>1234567</Contacts>
+  </Readers>
+  <Readers>
+    <ReaderID>2</ReaderID>
+    <ReaderName>Петров Петро Петрович</ReaderName>
+    <Contacts>2345678</Contacts>
+  </Readers>
+  <Readers>
+    <ReaderID>3</ReaderID>
+    <ReaderName>Сидоренко Олексій Олексійович</ReaderName>
+    <Contacts>3456789</Contacts>
+  </Readers>
+  <Readers>
+    <ReaderID>4</ReaderID>
+    <ReaderName>Коваленко Марія Іванівна</ReaderName>
+    <Contacts>kovalenko@gmail.com</Contacts>
+  </Readers>
+  <Readers>
+    <ReaderID>5</ReaderID>
+    <ReaderName>Ткаченко Анна Петрівна</ReaderName>
+    <Contacts>5678901</Contacts>
+  </Readers>
+  <Readers>
+    <ReaderID>6</ReaderID>
+    <ReaderName>Шевченко Олег Васильович</ReaderName>
+    <Contacts>shevchenko@example.com</Contacts>
+  </Readers>
+  <Readers>
+    <ReaderID>7</ReaderID>
+    <ReaderName>Бондаренко Катерина Іванівна</ReaderName>
+    <Contacts>bondarenko@example.com</Contacts>
+  </Readers>
+  <Readers>
+    <ReaderID>8</ReaderID>
+    <ReaderName>Гончаренко Андрій Андрійович</ReaderName>
+    <Contacts>8901234</Contacts>
+  </Readers>
+  <Readers>
+    <ReaderID>9</ReaderID>
+    <ReaderName>Довженко Оксана Олексіївна</ReaderName>
+    <Contacts>9012345</Contacts>
+  </Readers>
+  <Readers>
+    <ReaderID>10</ReaderID>
+    <ReaderName>Мельник Володимир Іванович</ReaderName>
+    <Contacts>0123456</Contacts>
+  </Readers>
+  <Readers>
+    <ReaderID>11</ReaderID>
+    <ReaderName>Василенко Олена Сергіївна</ReaderName>
+    <Contacts>vasilenko@example.com</Contacts>
+  </Readers>
+  <Readers>
+    <ReaderID>12</ReaderID>
+    <ReaderName>Кравченко Максим Олегович</ReaderName>
+    <Contacts>4567890</Contacts>
+  </Readers>
+  <Readers>
+    <ReaderID>13</ReaderID>
+    <ReaderName>Лисенко Ірина Миколаївна</ReaderName>
+    <Contacts>5678901</Contacts>
+  </Readers>
+  <Readers>
+    <ReaderID>14</ReaderID>
+    <ReaderName>Зайцева Наталія Іванівна</ReaderName>
+    <Contacts>zaytseva@example.com</Contacts>
+  </Readers>
+  <Readers>
+    <ReaderID>15</ReaderID>
+    <ReaderName>Орлов Дмитро Вікторович</ReaderName>
+    <Contacts>orlov@example.com</Contacts>
+  </Readers>
+  <Readers>
+    <ReaderID>16</ReaderID>
+    <ReaderName>Гриценко Сергій Петрович</ReaderName>
+    <Contacts>6789012</Contacts>
+  </Readers>
+  <IssueReturnBooks>
+    <BookID>1</BookID>
+    <ReaderID>2</ReaderID>
+    <IssueDate>01.05.2024</IssueDate>
+    <ReturnDate>01.06.2024</ReturnDate>
+    <ReturnStatus>Повернено</ReturnStatus>
+  </IssueReturnBooks>
+  <IssueReturnBooks>
+    <BookID>18</BookID>
+    <ReaderID>4</ReaderID>
+    <IssueDate>03.05.2024</IssueDate>
+    <ReturnDate>03.06.2024</ReturnDate>
+    <ReturnStatus>Повернено</ReturnStatus>
+  </IssueReturnBooks>
+  <IssueReturnBooks>
+    <BookID>6</BookID>
+    <ReaderID>6</ReaderID>
+    <IssueDate>04.05.2024</IssueDate>
+    <ReturnDate>04.06.2024</ReturnDate>
+    <ReturnStatus>Повернено</ReturnStatus>
+  </IssueReturnBooks>
+  <IssueReturnBooks>
+    <BookID>7</BookID>
+    <ReaderID>2</ReaderID>
+    <IssueDate>02.05.2024</IssueDate>
+    <ReturnDate>02.06.2024</ReturnDate>
+    <ReturnStatus>Не повернено</ReturnStatus>
+  </IssueReturnBooks>
+  <IssueReturnBooks>
+    <BookID>16</BookID>
+    <ReaderID>11</ReaderID>
+    <IssueDate>10.05.2024</IssueDate>
+    <ReturnDate>10.06.2024</ReturnDate>
+    <ReturnStatus>Повернено</ReturnStatus>
+  </IssueReturnBooks>
+  <IssueReturnBooks>
+    <BookID>19</BookID>
+    <ReaderID>11</ReaderID>
+    <IssueDate>10.05.2024</IssueDate>
+    <ReturnDate>10.06.2024</ReturnDate>
+    <ReturnStatus>Повернено</ReturnStatus>
+  </IssueReturnBooks>
+  <IssueReturnBooks>
+    <BookID>7</BookID>
+    <ReaderID>11</ReaderID>
+    <IssueDate>10.06.2024</IssueDate>
+    <ReturnDate>10.07.2024</ReturnDate>
+    <ReturnStatus>Повернено</ReturnStatus>
+  </IssueReturnBooks>
+  <IssueReturnBooks>
+    <BookID>13</BookID>
+    <ReaderID>1</ReaderID>
+    <IssueDate>15.05.2024</IssueDate>
+    <ReturnDate>15.06.2024</ReturnDate>
+    <ReturnStatus>Не повернено</ReturnStatus>
+  </IssueReturnBooks>
+  <IssueReturnBooks>
+    <BookID>22</BookID>
+    <ReaderID>16</ReaderID>
+    <IssueDate>23.05.2024</IssueDate>
+    <ReturnDate>23.06.2024</ReturnDate>
+    <ReturnStatus>Повернено</ReturnStatus>
+  </IssueReturnBooks>
+</NewDataSet>
